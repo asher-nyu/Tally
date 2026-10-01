@@ -1,0 +1,24 @@
+{
+  "status": "Draft for App Store Connect",
+  "primaryLanguage": "en-US",
+  "name": "Tally: Cash Flow",
+  "subtitle": "Income, expenses & reminders",
+  "price": "Free",
+  "primaryCategory": "Finance",
+  "copyright": "Copyright © 2026 Asher Bloom. All rights reserved.",
+  "description": "Know what’s coming.\n\nTally brings your income, expenses, and their timing into one clear view. See how much is scheduled to come in and go out, and when, on iPhone, iPad, and Mac.\n\nSee the month. Understand the year.\nMove between monthly and annual views to see regular bills alongside subscriptions, bonuses, and larger expenses. Totals follow the actual schedule, including months with an extra payday. Keep variable amounts in view alongside the amounts you already know.\n\nA schedule that fits.\nAdd monthly, every-two-weeks, annual, or one-time income and expenses. For other routines, create a custom schedule: every 16 days, the last Friday of each month, or another pattern that works for you. Choose categories, search your list, and sort by name, date, or amount.\n\nRemember what needs your attention.\nSet a reminder for the day something is scheduled or several days before, with your choice of time and sound. Add a provider’s website so it is easy to get to the right place when a payment needs your attention.\n\nYour file, where you want it.\nKeep your information in a .tally file that you can name, move, and open. Save it in iCloud Drive to access it on your devices, or choose another storage location.\n\nMade for the way you work.\nUse a clear, native interface that adapts to iPhone, iPad, and Mac, with the light or dark appearance you choose for your device.\n\nReminder delivery and sounds depend on your device’s notification and Focus settings.",
+  "keywords": "budget,expenses,reminder,subscriptions,payday,salary,planner,recurring,annual,monthly",
+  "supportEmail": "asherbloom@nyu.edu",
+  "supportURL": "https://tally.asher-nyu.com/",
+  "privacyPolicyURL": "https://tally.asher-nyu.com/privacy",
+  "reviewContact": {
+    "firstName": "Asher",
+    "lastName": "Bloom",
+    "email": "asherbloom@nyu.edu",
+    "phoneNumber": null
+  },
+  "signInRequired": false,
+  "reviewNotes": "Tally is a file-based schedule for income and expenses on iPhone, iPad, and Mac. All financial information is entered by the user. It does not connect to bank accounts, execute payments, trade, or provide financial advice. It is free.\n\nNo Tally account or review login is required. iCloud Drive uses the device’s Apple Account. The user can also choose an available local or other file-provider location.\n\nTo review: create a new Tally file, then use the + button to add Income or an Expense. For example, add fictional income named Salary for 2500 every two weeks, and an expense named Rent for 1500 monthly on day 1. Browse Month and Year to see scheduled totals. Custom frequency supports day, week, month, and year intervals, including selected weekdays and an optional end date.\n\nTo review notifications, enable Remind me while adding or editing a scheduled item, choose a time, save, and allow notification permission. Tally uses system repeating notifications and automatic on-device scheduling. Notifications can be delivered while the app is closed; delivery and sounds depend on the device’s notification and Focus settings. Notification permission is controlled separately on each device.\n\nThe optional website field accepts a user-supplied provider address. Opening it launches the default browser on Mac or the system website handler on iPhone and iPad. Any payment is completed with that external provider.\n\nTally stores .tally files in a location chosen by the user, with iCloud Drive → Tally as the default when available. Reminder-enabled income and expenses are also cached locally for notification scheduling. The Privacy & Support screen explains storage, notifications, deletion, external links, and support contact details.",
+  "appStoreAppID": "6816792539",
+  "copyrightNotice": "Copyright © 2026 Asher Bloom. All rights reserved."
+}

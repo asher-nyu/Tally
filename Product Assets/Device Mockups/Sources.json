@@ -1,0 +1,25 @@
+{
+  "canvas": {
+    "width": 4000,
+    "height": 2662
+  },
+  "screens": {
+    "mac": {
+      "source": "../Product Screenshots/Tally-Mac-01.png",
+      "sha256": "2a54691f40e8e4988ada3ddd35451d5a3a45bb7b5a63b80946bb2ad9462f1d4e",
+      "editable_asset": "assets/mac-screen.png"
+    },
+    "iphone": {
+      "source": "../Product Screenshots/Tally-iPhone-01.png",
+      "sha256": "d46920e895c3f8bfb6612b23191bf246f1aea2620dc0378dc72a18e93f6a97b4",
+      "editable_asset": "assets/iphone-screen.png"
+    },
+    "ipad": {
+      "source": "../Product Screenshots/Tally-iPad-03.png",
+      "sha256": "c9ad6b92560a957ab63236ac5da7a2081282ea9ffa9078ad8f6f16d142a62229",
+      "editable_asset": "assets/ipad-screen.png"
+    }
+  },
+  "background": "assets/background.svg",
+  "source_images_unchanged": true
+}

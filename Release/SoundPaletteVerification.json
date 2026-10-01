@@ -1,0 +1,486 @@
+{
+  "verified_at": "2026-09-29T23:08:53.843515+00:00",
+  "scope": "Local sound palette and repeated-selection preview update; no App Store upload or submission.",
+  "choices": [
+    "Ripple",
+    "Pebble",
+    "Glow",
+    "Lift",
+    "Signal",
+    "None"
+  ],
+  "default": "Ripple",
+  "replay_behavior": "Every audible menu selection requests a preview, including the currently selected sound. A fresh player starts after stopping the previous player. None stops playback.",
+  "compatibility": "Surviving stored identifiers keep their slots; retired recognized identifiers and missing settings use Ripple. None remains silent. Unknown identifiers fail decoding without modifying cached reminders.",
+  "tests": {
+    "unit": {
+      "result": "Passed",
+      "totalTestCount": 220,
+      "passedTests": 220,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Thread running at User-initiated quality-of-service class waiting on a lower QoS thread running at Utility quality-of-service class. Investigate ways to avoid priority inversions",
+          "sourceURL": "file:///Users/asherbloom/Downloads/Tally/Tests/Unit/MacDocumentLifetimeTests.swift"
+        }
+      ],
+      "result_bundle": "/tmp/TallySoundPaletteReplayMacUnit20.xcresult"
+    },
+    "mac_ui": {
+      "result": "Passed",
+      "cases": {
+        "TallyUITests/testReminderSoundChoicesPersistAndCancelDiscardsDraftChanges()": {
+          "result": "Passed",
+          "result_bundle": "/tmp/TallySoundPaletteReplayMacUI20.xcresult",
+          "duration_seconds": 125.6625269651413
+        },
+        "TallyUITests/testSelectingTheCurrentSoundRequestsAnotherPreview()": {
+          "result": "Passed",
+          "result_bundle": "/tmp/TallySoundPaletteReplayMacUI20-Retry.xcresult",
+          "duration_seconds": 75.31159806251526
+        }
+      }
+    },
+    "iphone_ui": {
+      "result": "Passed",
+      "cases": {
+        "TallyUITests/testReminderSoundChoicesPersistAndCancelDiscardsDraftChanges()": {
+          "result": "Passed",
+          "result_bundle": "/tmp/TallySoundPaletteReplay20-iPhone18ProMax-20260929-Final.xcresult",
+          "duration_seconds": 180.68750095367432
+        },
+        "TallyUITests/testSelectingTheCurrentSoundRequestsAnotherPreview()": {
+          "result": "Passed",
+          "result_bundle": "/tmp/TallySoundPaletteReplay20-iPhone18ProMax-20260929-Final.xcresult",
+          "duration_seconds": 125.17236399650574
+        }
+      }
+    },
+    "ipad_ui": {
+      "result": "Passed",
+      "cases": {
+        "TallyUITests/testReminderSoundChoicesPersistAndCancelDiscardsDraftChanges()": {
+          "result": "Passed",
+          "result_bundle": "/tmp/TallySoundPaletteReplay20-iPadAir13-20260929-Retry.xcresult",
+          "duration_seconds": 208.5017499923706
+        },
+        "TallyUITests/testSelectingTheCurrentSoundRequestsAnotherPreview()": {
+          "result": "Passed",
+          "result_bundle": "/tmp/TallySoundPaletteReplay20-iPadAir13-20260929-Retry.xcresult",
+          "duration_seconds": 128.963604927063
+        }
+      }
+    }
+  },
+  "ui_test_attempts": {
+    "mac_ui": [
+      {
+        "result_bundle": "/tmp/TallySoundPaletteReplayMacUI20.xcresult",
+        "result": "Failed",
+        "passed": 1,
+        "failed": 1,
+        "runtime_warnings": [
+          {
+            "issueType": "Runtime Warning",
+            "message": "[Internal] Thread running at User-interactive quality-of-service class waiting on a lower QoS thread running at Default quality-of-service class. Investigate ways to avoid priority inversions"
+          }
+        ],
+        "devices": [
+          {
+            "deviceName": "My Mac",
+            "modelName": "MacBook Pro",
+            "osVersion": "27.0.1",
+            "platform": "macOS"
+          }
+        ]
+      },
+      {
+        "result_bundle": "/tmp/TallySoundPaletteReplayMacUI20-Retry.xcresult",
+        "result": "Passed",
+        "passed": 1,
+        "failed": 0,
+        "runtime_warnings": [],
+        "devices": [
+          {
+            "deviceName": "My Mac",
+            "modelName": "MacBook Pro",
+            "osVersion": "27.0.1",
+            "platform": "macOS"
+          }
+        ]
+      }
+    ],
+    "iphone_ui": [
+      {
+        "result_bundle": "/tmp/TallySoundPaletteReplay20-iPhone18ProMax-20260929.xcresult",
+        "result": "Failed",
+        "passed": 1,
+        "failed": 1,
+        "runtime_warnings": [
+          {
+            "issueType": "Runtime Warning",
+            "message": "Invalid frame dimension (negative or non-finite)."
+          },
+          {
+            "issueType": "Runtime Warning",
+            "message": "Invalid frame dimension (negative or non-finite)."
+          }
+        ],
+        "devices": [
+          {
+            "deviceName": "iPhone 18 Pro Max",
+            "modelName": "iPhone 18 Pro Max",
+            "osVersion": "27.0",
+            "platform": "iOS Simulator"
+          }
+        ]
+      },
+      {
+        "result_bundle": "/tmp/TallySoundPaletteReplay20-iPhone18ProMax-20260929-Retry.xcresult",
+        "result": "Passed",
+        "passed": 1,
+        "failed": 0,
+        "runtime_warnings": [
+          {
+            "issueType": "Runtime Warning",
+            "message": "Invalid frame dimension (negative or non-finite)."
+          }
+        ],
+        "devices": [
+          {
+            "deviceName": "iPhone 18 Pro Max",
+            "modelName": "iPhone 18 Pro Max",
+            "osVersion": "27.0",
+            "platform": "iOS Simulator"
+          }
+        ]
+      },
+      {
+        "result_bundle": "/tmp/TallySoundPaletteReplay20-iPhone18ProMax-20260929-Final.xcresult",
+        "result": "Passed",
+        "passed": 2,
+        "failed": 0,
+        "runtime_warnings": [
+          {
+            "issueType": "Runtime Warning",
+            "message": "Invalid frame dimension (negative or non-finite)."
+          },
+          {
+            "issueType": "Runtime Warning",
+            "message": "Invalid frame dimension (negative or non-finite)."
+          }
+        ],
+        "devices": [
+          {
+            "deviceName": "iPhone 18 Pro Max",
+            "modelName": "iPhone 18 Pro Max",
+            "osVersion": "27.0",
+            "platform": "iOS Simulator"
+          }
+        ]
+      }
+    ],
+    "ipad_ui": [
+      {
+        "result_bundle": "/tmp/TallySoundPaletteReplay20-iPadAir13-20260929.xcresult",
+        "result": "Failed",
+        "passed": 0,
+        "failed": 2,
+        "runtime_warnings": [
+          {
+            "issueType": "Runtime Warning",
+            "message": "Invalid frame dimension (negative or non-finite)."
+          },
+          {
+            "issueType": "Runtime Warning",
+            "message": "Invalid frame dimension (negative or non-finite)."
+          }
+        ],
+        "devices": [
+          {
+            "deviceName": "iPad Air 13-inch (M4)",
+            "modelName": "iPad Air 13-inch (M4)",
+            "osVersion": "27.0",
+            "platform": "iOS Simulator"
+          }
+        ]
+      },
+      {
+        "result_bundle": "/tmp/TallySoundPaletteReplay20-iPadAir13-20260929-Retry.xcresult",
+        "result": "Passed",
+        "passed": 2,
+        "failed": 0,
+        "runtime_warnings": [
+          {
+            "issueType": "Runtime Warning",
+            "message": "Invalid frame dimension (negative or non-finite)."
+          },
+          {
+            "issueType": "Runtime Warning",
+            "message": "Invalid frame dimension (negative or non-finite)."
+          }
+        ],
+        "devices": [
+          {
+            "deviceName": "iPad Air 13-inch (M4)",
+            "modelName": "iPad Air 13-inch (M4)",
+            "osVersion": "27.0",
+            "platform": "iOS Simulator"
+          }
+        ]
+      }
+    ]
+  },
+  "test_harness_repairs": [
+    "Mac static text exposes its text through AX value; replay assertions accept value or label.",
+    "DEBUG preview counter is grouped inside the existing footer for iOS accessibility.",
+    "iPad sound assertions read the parent control value; keyboard dismissal handles its hardware-keyboard accessory."
+  ],
+  "test_scope": "Unit suite plus persistence/cancel and same-sound replay UI regressions on Mac, iPhone simulator, and iPad simulator. Synthetic fixtures only. UI audio is suppressed; observable selection requests and injected player tests verify wiring and restart ordering.",
+  "visual_checks": {
+    "mac_native_menu": "/tmp/TallySoundPaletteReplayMacUI20-attachments/871709AE-FAF9-4DBE-9D74-913ECB9672DB.png",
+    "ipad_native_menu": "/tmp/TallySoundPaletteReplay20-iPadAir13-Retry-attachments/CF17B980-0505-4B0D-8B9E-19A5BD94B3BD.png",
+    "iphone_checked_after_repeated_ripple": "/tmp/TallySoundPaletteReplay20-Phone-CheckedRippleAfterReplay.png",
+    "iphone_checked_after_repeated_signal": "/tmp/TallySoundPaletteReplay20-Phone-CheckedSignalAfterReplay.png",
+    "result": "Six aligned menu titles on each platform; native checkmark remains on the selected option after repeated selection."
+  },
+  "audio_validation": "Original Sound Previews/Validation.json",
+  "browser_preview": [
+    {
+      "width": 1280,
+      "appearance": "light",
+      "scrollWidth": 1280,
+      "labels": [
+        "Ripple",
+        "Pebble",
+        "Glow",
+        "Lift",
+        "Signal",
+        "None"
+      ],
+      "audio": [
+        {
+          "src": "Ripple.wav",
+          "duration": 1.8,
+          "error": null
+        },
+        {
+          "src": "Pebble.wav",
+          "duration": 1.15,
+          "error": null
+        },
+        {
+          "src": "Glow.wav",
+          "duration": 2.1,
+          "error": null
+        },
+        {
+          "src": "Lift.wav",
+          "duration": 1.35,
+          "error": null
+        },
+        {
+          "src": "Signal.wav",
+          "duration": 1.5,
+          "error": null
+        }
+      ],
+      "default": "Ripple"
+    },
+    {
+      "width": 320,
+      "appearance": "light",
+      "scrollWidth": 320,
+      "labels": [
+        "Ripple",
+        "Pebble",
+        "Glow",
+        "Lift",
+        "Signal",
+        "None"
+      ],
+      "audio": [
+        {
+          "src": "Ripple.wav",
+          "duration": 1.8,
+          "error": null
+        },
+        {
+          "src": "Pebble.wav",
+          "duration": 1.15,
+          "error": null
+        },
+        {
+          "src": "Glow.wav",
+          "duration": 2.1,
+          "error": null
+        },
+        {
+          "src": "Lift.wav",
+          "duration": 1.35,
+          "error": null
+        },
+        {
+          "src": "Signal.wav",
+          "duration": 1.5,
+          "error": null
+        }
+      ],
+      "default": "Ripple"
+    },
+    {
+      "width": 390,
+      "appearance": "dark",
+      "scrollWidth": 390,
+      "labels": [
+        "Ripple",
+        "Pebble",
+        "Glow",
+        "Lift",
+        "Signal",
+        "None"
+      ],
+      "audio": [
+        {
+          "src": "Ripple.wav",
+          "duration": 1.8,
+          "error": null
+        },
+        {
+          "src": "Pebble.wav",
+          "duration": 1.15,
+          "error": null
+        },
+        {
+          "src": "Glow.wav",
+          "duration": 2.1,
+          "error": null
+        },
+        {
+          "src": "Lift.wav",
+          "duration": 1.35,
+          "error": null
+        },
+        {
+          "src": "Signal.wav",
+          "duration": 1.5,
+          "error": null
+        }
+      ],
+      "default": "Ripple"
+    },
+    {
+      "width": 1280,
+      "appearance": "dark",
+      "scrollWidth": 1280,
+      "labels": [
+        "Ripple",
+        "Pebble",
+        "Glow",
+        "Lift",
+        "Signal",
+        "None"
+      ],
+      "audio": [
+        {
+          "src": "Ripple.wav",
+          "duration": 1.8,
+          "error": null
+        },
+        {
+          "src": "Pebble.wav",
+          "duration": 1.15,
+          "error": null
+        },
+        {
+          "src": "Glow.wav",
+          "duration": 2.1,
+          "error": null
+        },
+        {
+          "src": "Lift.wav",
+          "duration": 1.35,
+          "error": null
+        },
+        {
+          "src": "Signal.wav",
+          "duration": 1.5,
+          "error": null
+        }
+      ],
+      "default": "Ripple"
+    }
+  ],
+  "builds": {
+    "release_app": {
+      "path": "/tmp/TallySoundPaletteLocalRelease20/Build/Products/Release/Tally.app",
+      "version": "1.0",
+      "build": "20",
+      "strict_signature_verified": true,
+      "sound_resources": {
+        "Rebound.caf": "f228b279d55fe1097b06fc6544148f8a6ae80d8c0a7d2ec0eff7e046b8602381",
+        "Bell.caf": "060d483df1604f5bbbe181176e45b8a056bef2b78382d845d70392953d0ba694",
+        "Bamboo.caf": "95de3cc1e63cefda6d75461e4cfec7a53d9bc71ea0c8db371e28fc2019b0ea76",
+        "Chime.caf": "25133da555bdbebf3eac0e26ff651e04529a11a6505008e17dcd3d2de600478d",
+        "Chord.caf": "60de1ffcf17c3850c15a1779897859eae59667f738f0a50c5e22400973c24650"
+      }
+    },
+    "local_app": {
+      "path": "/Users/asherbloom/Applications/Tally.app",
+      "version": "1.0",
+      "build": "20",
+      "strict_signature_verified": true,
+      "sound_resources": {
+        "Rebound.caf": "f228b279d55fe1097b06fc6544148f8a6ae80d8c0a7d2ec0eff7e046b8602381",
+        "Bell.caf": "060d483df1604f5bbbe181176e45b8a056bef2b78382d845d70392953d0ba694",
+        "Bamboo.caf": "95de3cc1e63cefda6d75461e4cfec7a53d9bc71ea0c8db371e28fc2019b0ea76",
+        "Chime.caf": "25133da555bdbebf3eac0e26ff651e04529a11a6505008e17dcd3d2de600478d",
+        "Chord.caf": "60de1ffcf17c3850c15a1779897859eae59667f738f0a50c5e22400973c24650"
+      }
+    },
+    "iphone_simulator": {
+      "path": "/tmp/TallySoundPaletteMobile20/Build/Products/Debug-iphonesimulator/Tally.app",
+      "version": "1.0",
+      "build": "20",
+      "sound_resources": {
+        "Rebound.caf": "f228b279d55fe1097b06fc6544148f8a6ae80d8c0a7d2ec0eff7e046b8602381",
+        "Bell.caf": "060d483df1604f5bbbe181176e45b8a056bef2b78382d845d70392953d0ba694",
+        "Bamboo.caf": "95de3cc1e63cefda6d75461e4cfec7a53d9bc71ea0c8db371e28fc2019b0ea76",
+        "Chime.caf": "25133da555bdbebf3eac0e26ff651e04529a11a6505008e17dcd3d2de600478d",
+        "Chord.caf": "60de1ffcf17c3850c15a1779897859eae59667f738f0a50c5e22400973c24650"
+      }
+    },
+    "ipad_simulator": {
+      "path": "/tmp/TallySoundPaletteiPadReplay20/Build/Products/Debug-iphonesimulator/Tally.app",
+      "version": "1.0",
+      "build": "20",
+      "sound_resources": {
+        "Rebound.caf": "f228b279d55fe1097b06fc6544148f8a6ae80d8c0a7d2ec0eff7e046b8602381",
+        "Bell.caf": "060d483df1604f5bbbe181176e45b8a056bef2b78382d845d70392953d0ba694",
+        "Bamboo.caf": "95de3cc1e63cefda6d75461e4cfec7a53d9bc71ea0c8db371e28fc2019b0ea76",
+        "Chime.caf": "25133da555bdbebf3eac0e26ff651e04529a11a6505008e17dcd3d2de600478d",
+        "Chord.caf": "60de1ffcf17c3850c15a1779897859eae59667f738f0a50c5e22400973c24650"
+      }
+    }
+  },
+  "source_sha256": {
+    "Sources/Domain/PaymentReminder.swift": "a9ef795c73ddfd4730708c91178de201aec236e436b675fc2cb93667ce0e8597",
+    "Sources/Services/ReminderSoundPreview.swift": "dbbdd6b98683a0ceb3f9254eb8e5aabb394f411e9603d456a1206d8fa525c04f",
+    "Sources/Services/NotificationCoordinator.swift": "0a9d45ed2bc23e087b2a81d811e9f6db22d3ee253c922020c8a1cef2c80ff5c1",
+    "Sources/Views/ReminderSection.swift": "589dc6bb82bd06e0f2b7b8f7bf57fc8b772c135922e0326d0ae7a75dc215a8b5",
+    "Sources/Views/ExpenseEditorView.swift": "32e9d1bf358a4d453b2cdbe4646940c0f42fe494d5c6a3d86c37c7775227deb8",
+    "Tests/Unit/ReminderSoundPreviewTests.swift": "93b1acdcf4b091e04ebdf6696f7e5afde28bce84f53c5e79d65a9d1e52b6bf32",
+    "Tests/Unit/ReminderSoundMigrationTests.swift": "e4b1323fa5a384639fd16d84d2b233d04831316c20a5d89940f82e0e56058ab5",
+    "Tests/UI/TallyUITests.swift": "9e235db2b5121085eeb67050c9033ad88a77b2efe47fa8b3662c0c0d29177101"
+  },
+  "limitations": [
+    "Physical iPhone/iPad speaker playback and perceived loudness were not tested.",
+    "The previous sound-menu scene remains in Product Assets/Product Screenshots/Tally-iPhone-03.png and its Release/App Store Screenshots/iPhone copy; recapture with the final app before a later submission."
+  ],
+  "test_tooling_notes": [
+    "After the final iPhone suite completed successfully, its optional simctl diagnose collector was stopped with SIGTERM because it delayed result finalization. xcodebuild then exited0 and reported TEST SUCCEEDED; both functional test results were preserved.",
+    "The iPad result retains two invalid-frame runtime warnings during initial name-field focus, before sound interaction. No source location was reported; reminder menu and saved-row screenshots showed no clipping. This unrelated warning was not changed in this sound patch."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "captured_at": "2026-09-30T00:16:44.918611+00:00",
+  "app_version": "1.0 (21)",
+  "configuration": "Release",
+  "device": "iPhone 18 Pro Max simulator",
+  "scenario": "Jordan Ellis \u2014 My Money",
+  "scenario_source": "Product Assets/Scenarios/My Money.tally",
+  "scenario_sha256": "876cc532e79b913fd235a58b03fbdec4dce508e3b57b8656dc4507fc5122fe9c",
+  "status_bar_date": "2026-09-28T09:41:00-04:00",
+  "dimensions": {
+    "width": 1320,
+    "height": 2868
+  },
+  "format": "PNG, 8-bit RGB, sRGB, no alpha",
+  "source": "Native XCUIScreen screenshot; copied without image transformation",
+  "screenshot_sha256": "0cf02c678e451e335aa265dfc067fa8c26e66119e0f514b819794f4e27661b52",
+  "replaced_sha256": "9ef7917da6b0de03798cabdd0212d66e140f1c338a2c85da6ade6211d74f0a50",
+  "paths": [
+    "Product Assets/Product Screenshots/Tally-iPhone-03.png",
+    "Release/App Store Screenshots/iPhone/Tally-iPhone-03.png"
+  ],
+  "verified_ui": {
+    "lead_time": "1 day before",
+    "time": "9:00 AM",
+    "sound": "Ripple",
+    "sound_options": [
+      "Ripple",
+      "Pebble",
+      "Glow",
+      "Lift",
+      "Signal",
+      "None"
+    ],
+    "cursor": false,
+    "scroll_indicator": false,
+    "battery": "Full, not charging"
+  },
+  "draft_cancelled": true,
+  "canonical_scenarios_unchanged": true,
+  "test_result": "Passed, 1 test, 0 failures",
+  "result_bundle": "/tmp/TallyProductCapture21-v4.xcresult",
+  "previous_image_archive": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-29/Tally Product Screenshot Replacements/Tally-iPhone-03-build15.png",
+  "captureCleanup": {
+    "ownedWorkingCopyRemoved": true,
+    "canonicalScenariosUnchanged": true,
+    "originalLastUsedFileBookmarkRestored": true,
+    "temporaryStatusBarOverrideCleared": true
+  }
+}

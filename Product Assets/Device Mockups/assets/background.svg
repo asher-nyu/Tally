@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4000" height="2662" viewBox="0 0 4000 2662">
+<title>Graphite studio background</title>
+<defs>
+  <linearGradient id="studio-base" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#141c28"/><stop offset=".44" stop-color="#202c3d"/><stop offset="1" stop-color="#101826"/></linearGradient>
+  <radialGradient id="studio-softbox" cx=".42" cy=".32" r=".69"><stop stop-color="#6b7b94" stop-opacity=".40"/><stop offset=".6" stop-color="#495c77" stop-opacity=".18"/><stop offset="1" stop-color="#27394e" stop-opacity="0"/></radialGradient>
+  <linearGradient id="studio-floor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#6e8099" stop-opacity="0"/><stop offset=".78" stop-color="#6e8099" stop-opacity=".07"/><stop offset="1" stop-color="#101726" stop-opacity=".15"/></linearGradient>
+  <radialGradient id="floor-light"><stop stop-color="#7689a7" stop-opacity=".16"/><stop offset=".8" stop-color="#3b4a61" stop-opacity=".08"/><stop offset="1" stop-color="#324055" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="4000" height="2662" fill="url(#studio-base)"/>
+<rect width="4000" height="2662" fill="url(#studio-softbox)"/>
+<rect y="1450" width="4000" height="1212" fill="url(#studio-floor)"/>
+<ellipse cx="2030" cy="2295" rx="2120" ry="400" fill="url(#floor-light)"/>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="4000" height="2662" viewBox="0 0 4000 2662" fill="none" role="img" aria-labelledby="artwork-title artwork-description">
+<title id="artwork-title">Tally on Mac, iPhone, and iPad</title>
+<desc id="artwork-description">Editable device illustration featuring a Silver 16-inch MacBook Pro, a Burgundy iPhone 18 Pro Max, and a Purple 13-inch iPad Air. Each screen contains an unchanged Tally screenshot from a fictional scenario. The screen images and background are independently replaceable.</desc>
+<metadata>Original illustration by Asher Bloom for Tally. Canvas 4000 × 2662. Editable screen-image IDs: mac-screen, iphone-screen, ipad-screen. Background ID: background-image.</metadata>
+<defs>
+  <linearGradient id="silver-edge" x1="0" y1="0" x2="1" y2=".9"><stop stop-color="#fcfdfe"/><stop offset=".2" stop-color="#a0a5aa"/><stop offset=".54" stop-color="#d7d9dc"/><stop offset=".8" stop-color="#8e959c"/><stop offset="1" stop-color="#e8e9eb"/></linearGradient>
+  <linearGradient id="silver-deck" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c6cacf"/><stop offset=".22" stop-color="#f0f1f2"/><stop offset=".58" stop-color="#d4d8db"/><stop offset="1" stop-color="#a6aeb4"/></linearGradient>
+  <linearGradient id="silver-lip" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#eff1f3"/><stop offset=".2" stop-color="#b5bcc2"/><stop offset=".75" stop-color="#9da4aa"/><stop offset="1" stop-color="#6b7278"/></linearGradient>
+  <linearGradient id="glass-edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#45474a"/><stop offset=".42" stop-color="#111214"/><stop offset="1" stop-color="#292b2e"/></linearGradient>
+  <linearGradient id="burgundy-metal" x1="0" y1="0" x2="1" y2=".15"><stop stop-color="#472732"/><stop offset=".04" stop-color="#c1909c"/><stop offset=".11" stop-color="#784552"/><stop offset=".38" stop-color="#5a303e"/><stop offset=".76" stop-color="#764450"/><stop offset=".96" stop-color="#a06b77"/><stop offset="1" stop-color="#3d1c28"/></linearGradient>
+  <linearGradient id="burgundy-button" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#3a1925"/><stop offset=".45" stop-color="#965e6c"/><stop offset="1" stop-color="#512e3b"/></linearGradient>
+  <linearGradient id="purple-metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e2dbea"/><stop offset=".18" stop-color="#bcb0ce"/><stop offset=".5" stop-color="#89799f"/><stop offset=".72" stop-color="#c5b8d5"/><stop offset="1" stop-color="#857493"/></linearGradient>
+  <linearGradient id="rim-highlight" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".65"/><stop offset=".4" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity=".32"/></linearGradient>
+  <radialGradient id="lens"><stop stop-color="#2e4a62"/><stop offset=".45" stop-color="#142334"/><stop offset="1" stop-color="#080b10"/></radialGradient>
+  <filter id="device-shadow" x="-.2" y="-.15" width="1.5" height="1.6" color-interpolation-filters="sRGB"><feDropShadow dx="3" dy="40" stdDeviation="30" flood-color="#03060b" flood-opacity=".34"/><feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#020306" flood-opacity=".42"/></filter>
+  <filter id="ground-blur" x="-.3" y="-2" width="1.6" height="5"><feGaussianBlur stdDeviation="22"/></filter>
+  <clipPath id="mac-screen-mask"><rect x="21" y="22" width="2098" height="1356.403935" rx="21"/></clipPath>
+  <clipPath id="phone-screen-mask"><rect x="14" y="12" width="502" height="1090.690909" rx="74"/></clipPath>
+  <clipPath id="ipad-screen-mask"><rect x="39" y="37" width="1352" height="1013.499268" rx="13"/></clipPath>
+</defs>
+
+<!-- REPLACEABLE BACKGROUND. Change this image or hide the entire Background group. -->
+<g id="background" inkscape:groupmode="layer" inkscape:label="01 · Background — replaceable">
+  <image id="background-image" data-asset="background" xlink:href="assets/background.svg" x="0" y="0" width="4000" height="2662" preserveAspectRatio="xMidYMid slice"/>
+</g>
+
+<!-- DEVICE GROUPS. Screens preserve the complete native source aspect ratio. -->
+<g id="macbook-pro-16-silver" inkscape:groupmode="layer" inkscape:label="02 · MacBook Pro 16 — Silver" transform="translate(340 406.7) scale(1.22)">
+  <ellipse id="mac-ground-shadow" cx="1070" cy="1516" rx="1048" ry="24" fill="#010307" opacity=".5" filter="url(#ground-blur)"/>
+  <g id="mac-hardware" filter="url(#device-shadow)">
+    <rect x="-3" y="-3" width="2146" height="1426" rx="40" fill="url(#silver-edge)" stroke="#8c9399" stroke-width="1.5"/>
+    <rect x="2" y="2" width="2136" height="1416" rx="35" fill="#17191b"/>
+    <rect x="6" y="6" width="2128" height="1408" rx="32" fill="url(#glass-edge)" stroke="#616369" stroke-opacity=".35"/>
+    <g id="mac-display" clip-path="url(#mac-screen-mask)">
+      <image id="mac-screen" data-asset="mac" xlink:href="assets/mac-screen.png" x="21" y="22" width="2098" height="1356.403935" preserveAspectRatio="xMidYMid meet"/>
+    </g>
+    <path id="mac-camera-housing" d="M989 22H1151V42C1151 52 1144 58 1134 58H1006C996 58 989 52 989 42Z" fill="#121315"/>
+    <circle cx="1070" cy="38" r="5" fill="url(#lens)"/><circle cx="1069" cy="36.5" r="1.1" fill="#668396" opacity=".6"/>
+    <path d="M45 4H2095" stroke="#e3e5e7" stroke-opacity=".36" stroke-width="1.4"/>
+    <path d="M50 1419H2090" stroke="#666b71" stroke-opacity=".8" stroke-width="2"/>
+    <path id="mac-base-deck" d="M1 1419H2139L2264 1467C2268 1469 2268 1477 2262 1478H-122C-128 1477-128 1469-124 1467Z" fill="url(#silver-deck)" stroke="#afb6bc" stroke-width="1.8"/>
+    <path id="mac-base-lip" d="M-126 1476H2266C2256 1501 2229 1515 2190 1515H-50C-88 1515-115 1501-126 1476Z" fill="url(#silver-lip)" stroke="#959da4" stroke-width="1.3"/>
+    <path d="M-121 1478H2261" stroke="#f7f8f9" stroke-opacity=".9" stroke-width="2"/>
+    <path id="mac-opening-recess" d="M948 1419H1192L1195 1432C1196 1437 1192 1440 1184 1440H956C948 1440 944 1437 945 1432Z" fill="#a2a9af" stroke="#8e979f" stroke-width="1"/>
+    <path d="M957 1439H1183" stroke="#e8ebed" stroke-width="1.4"/>
+    <path d="M-45 1513H2185" stroke="#636b72" stroke-opacity=".48" stroke-width="1.5"/>
+  </g>
+</g>
+
+<g id="ipad-air-13-purple" inkscape:groupmode="layer" inkscape:label="03 · iPad Air 13 — Purple" transform="translate(2295 1111.55) scale(1.05)">
+  <ellipse cx="715" cy="1104" rx="690" ry="24" fill="#010307" opacity=".5" filter="url(#ground-blur)"/>
+  <g id="ipad-hardware" filter="url(#device-shadow)">
+    <rect id="ipad-top-button" x="1426" y="66" width="8" height="82" rx="4" fill="url(#purple-metal)" stroke="#857794"/>
+    <rect x="1171" y="-4" width="65" height="6" rx="3" fill="url(#purple-metal)" stroke="#92829f"/>
+    <rect x="1250" y="-4" width="65" height="6" rx="3" fill="url(#purple-metal)" stroke="#92829f"/>
+    <rect x="0" y="0" width="1430" height="1089" rx="59" fill="url(#purple-metal)" stroke="#8b7c9a" stroke-width="1.5"/>
+    <rect x="3" y="3" width="1424" height="1083" rx="56" stroke="url(#rim-highlight)" stroke-width="2"/>
+    <rect x="7" y="7" width="1416" height="1075" rx="52" fill="#141517"/>
+    <rect x="10" y="10" width="1410" height="1069" rx="49" stroke="#535054" stroke-opacity=".4" stroke-width="1.4"/>
+    <g id="ipad-display" clip-path="url(#ipad-screen-mask)">
+      <image id="ipad-screen" data-asset="ipad" xlink:href="assets/ipad-screen.png" x="39" y="37" width="1352" height="1013.499268" preserveAspectRatio="xMidYMid meet"/>
+    </g>
+    <circle id="ipad-camera" cx="715" cy="20" r="6.5" fill="#030509" stroke="#3b3a3f" stroke-width="1.5"/>
+    <circle cx="715" cy="20" r="3.7" fill="url(#lens)"/><circle cx="714" cy="18.8" r=".9" fill="#637c99" opacity=".45"/>
+    <circle cx="741" cy="20" r="2.1" fill="#222427"/>
+    <path d="M72 4H1358" stroke="#faf8ff" stroke-opacity=".4"/>
+  </g>
+</g>
+
+<g id="iphone-18-pro-max-burgundy" inkscape:groupmode="layer" inkscape:label="04 · iPhone 18 Pro Max — Burgundy" transform="translate(440 1140)">
+  <ellipse cx="265" cy="1135" rx="234" ry="20" fill="#010307" opacity=".5" filter="url(#ground-blur)"/>
+  <g id="iphone-hardware" filter="url(#device-shadow)">
+    <rect id="iphone-action-button" x="-5" y="214" width="8" height="45" rx="3.5" fill="url(#burgundy-button)" stroke="#522d38" stroke-width="1"/>
+    <rect id="iphone-volume-up" x="-5" y="302" width="8" height="81" rx="3.5" fill="url(#burgundy-button)" stroke="#522d38" stroke-width="1"/>
+    <rect id="iphone-volume-down" x="-5" y="409" width="8" height="81" rx="3.5" fill="url(#burgundy-button)" stroke="#522d38" stroke-width="1"/>
+    <rect id="iphone-side-button" x="527" y="334" width="8" height="127" rx="3.5" fill="url(#burgundy-button)" stroke="#522d38" stroke-width="1"/>
+    <rect id="iphone-camera-control" x="527" y="733" width="7" height="100" rx="3.5" fill="#633945" stroke="#b17c89" stroke-width=".8"/>
+    <rect id="iphone-frame" x="0" y="0" width="530" height="1115" rx="91" fill="url(#burgundy-metal)" stroke="#502b38" stroke-width="1.5"/>
+    <rect x="3.5" y="3.5" width="523" height="1108" rx="88" stroke="url(#rim-highlight)" stroke-width="2"/>
+    <rect x="8" y="6" width="514" height="1103" rx="82" fill="#131214"/>
+    <g id="iphone-display" clip-path="url(#phone-screen-mask)">
+      <image id="iphone-screen" data-asset="iphone" xlink:href="assets/iphone-screen.png" x="14" y="12" width="502" height="1090.690909" preserveAspectRatio="xMidYMid meet"/>
+    </g>
+    <rect id="iphone-dynamic-island" x="211" y="28" width="108" height="33" rx="16.5" fill="#060607"/>
+    <circle cx="302" cy="44.5" r="5.2" fill="#0e1013"/><circle cx="302" cy="44.5" r="3" fill="url(#lens)"/>
+    <path d="M68 5C77 2 85 2 100 2H430" stroke="#e8c5ce" stroke-opacity=".4" stroke-width="1.2"/>
+    <path d="M0 164H7M523 164H530M0 951H7M523 951H530" stroke="#c1a8b1" stroke-opacity=".64" stroke-width="4"/>
+  </g>
+</g>
+</svg>

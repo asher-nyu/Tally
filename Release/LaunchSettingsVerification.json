@@ -1,0 +1,189 @@
+{
+  "updated_at": "2026-09-29T23:57:25.615147+00:00",
+  "scope": "Local launch preferences and Settings for Mac, iPhone, and iPad. No App Store upload or submission.",
+  "build": "1.0 (21)",
+  "default": "Open last used file",
+  "choices": [
+    "Open last used file",
+    "Show file browser"
+  ],
+  "settings_access": {
+    "mac": "Tally > Settings or Command\u2013Comma",
+    "iphone_ipad": "Tally options (\u2026) in the file browser and open file"
+  },
+  "preference_storage": "Local to each device; the file contains no launch preference. The last file is retained through a system bookmark.",
+  "tests": {
+    "mac_unit": {
+      "result": "Passed",
+      "totalTestCount": 238,
+      "passedTests": 238,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [
+        {
+          "issueType": "Runtime Warning",
+          "message": "Thread running at User-initiated quality-of-service class waiting on a lower QoS thread running at Utility quality-of-service class. Investigate ways to avoid priority inversions",
+          "sourceURL": "file:///Users/asherbloom/Downloads/Tally/Tests/Unit/MacDocumentLifetimeTests.swift"
+        }
+      ],
+      "result_bundle": "/tmp/TallyLaunchMac21Unit.xcresult"
+    },
+    "mobile_bookmark_and_environment_unit": {
+      "result": "Passed",
+      "totalTestCount": 23,
+      "passedTests": 23,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [],
+      "result_bundle": "/tmp/TallyMobileLaunchUnits-20260929.xcresult"
+    },
+    "mobile_ordering_and_fixture_cleanup_unit": {
+      "result": "Passed",
+      "totalTestCount": 9,
+      "passedTests": 9,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [],
+      "result_bundle": "/tmp/TallyMobileLaunchOrderingUnits-20260929.xcresult"
+    },
+    "mac_ui": {
+      "result": "Passed",
+      "totalTestCount": 5,
+      "passedTests": 5,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [],
+      "result_bundle": "/tmp/TallyLaunchMac21UI-Final.xcresult"
+    },
+    "iphone_ui": {
+      "result": "Passed",
+      "totalTestCount": 4,
+      "passedTests": 4,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [],
+      "result_bundle": "/tmp/TallyLaunchMobile-iPhone-UI-v6.xcresult",
+      "appearance_note": "System dark appearance verified separately in the final focused run; this run established large-text layout in light mode."
+    },
+    "ipad_ui": {
+      "result": "Passed",
+      "totalTestCount": 4,
+      "passedTests": 4,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [],
+      "result_bundle": "/tmp/TallyLaunchMobile-iPad-UI-v6.xcresult",
+      "appearance_note": "System dark appearance verified separately in the final focused run; this run established large-text layout in light mode."
+    },
+    "iphone_icon_menu_ui": {
+      "result": "Passed",
+      "totalTestCount": 3,
+      "passedTests": 3,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [],
+      "result_bundle": "/tmp/TallyLaunchMobile-iPhone-Final.xcresult",
+      "visual_followup": "Largest-text clipping found during visual review was corrected and verified by the final accessibility run."
+    },
+    "ipad_icon_menu_ui": {
+      "result": "Passed",
+      "totalTestCount": 3,
+      "passedTests": 3,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [],
+      "result_bundle": "/tmp/TallyLaunchMobile-iPad-Final.xcresult",
+      "visual_followup": "Largest-text clipping found during visual review was corrected and verified by the final accessibility run."
+    },
+    "iphone_accessibility_ui": {
+      "result": "Passed",
+      "totalTestCount": 1,
+      "passedTests": 1,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [],
+      "result_bundle": "/tmp/TallyLaunchMobile-iPhone-Accessibility-v2.xcresult",
+      "appearance": "Actual simulator system Dark appearance; visually checked both choices at the largest accessibility text size. Original Light appearance restored afterward."
+    },
+    "ipad_accessibility_ui": {
+      "result": "Passed",
+      "totalTestCount": 1,
+      "passedTests": 1,
+      "failedTests": 0,
+      "skippedTests": 0,
+      "runtimeWarnings": [],
+      "result_bundle": "/tmp/TallyLaunchMobile-iPad-Accessibility-v2.xcresult",
+      "appearance": "Actual simulator system Dark appearance; visually checked both choices at the largest accessibility text size. Original Light appearance restored afterward."
+    }
+  },
+  "mac_external_cold_open": {
+    "result": "Passed",
+    "record": "/tmp/TallyLaunchMac21-ExplicitOpen.json",
+    "behavior": "With A remembered, launching through the system with B opened only B."
+  },
+  "manual_visual_checks": {
+    "mac_release_settings": "/tmp/TallyLaunchRelease21-Settings.png",
+    "mac_native_ui_attachments": "/tmp/TallyLaunchMac21UI-Final-Attachments",
+    "iphone_regular_settings": "/tmp/TallyLaunchMobile-iPhone-final-attachments/6AEC53F6-E824-4E8F-9C95-2BE3F5147A30.png",
+    "ipad_options_popover": "/tmp/TallyLaunchMobile-iPad-final-attachments/8D42B803-E7AB-4FF7-BBC7-F2EB6CDF4BC2.png",
+    "iphone_accessibility_default": "/tmp/TallyLaunchMobile-iPhone-accessibility-v2-attachments/40218621-D587-4C01-911B-48EB03B5EF9C.png",
+    "iphone_accessibility_browser": "/tmp/TallyLaunchMobile-iPhone-accessibility-v2-attachments/0998A074-449F-4A5A-A16F-09C87BA42E27.png",
+    "ipad_accessibility_default": "/tmp/TallyLaunchMobile-iPad-accessibility-v2-attachments/234A4069-8851-4CDD-A99F-BC5C4C8FFF01.png",
+    "ipad_accessibility_browser": "/tmp/TallyLaunchMobile-iPad-accessibility-v2-attachments/E3C85078-8B19-498F-9C37-871726D7BD25.png"
+  },
+  "mobile_ui_status": "Passed. Both Settings entry points, native options menus, launch behavior, and final accessibility layout verified on iPhone and iPad simulators.",
+  "installed_mac": "/Users/asherbloom/Applications/Tally.app",
+  "limitations": [
+    "Mobile validation uses simulators; physical-device and third-party cloud-provider restoration are not verified."
+  ],
+  "release_builds": {
+    "mac": {
+      "result": "Passed",
+      "version": "1.0",
+      "build": "21",
+      "app": "/tmp/TallyLaunchRelease21-Mac/Build/Products/Release/Tally.app",
+      "log": "/tmp/TallyLaunchRelease21-Mac-Final.log",
+      "code_signature": "Strict verification passed"
+    },
+    "ios_device": {
+      "result": "Passed",
+      "version": "1.0",
+      "build": "21",
+      "app": "/tmp/TallyLaunchRelease21-iOS/Build/Products/Release-iphoneos/Tally.app",
+      "log": "/tmp/TallyLaunchRelease21-iOS-Final.log",
+      "code_signature": "Strict verification passed"
+    },
+    "ios_simulator": {
+      "result": "Passed",
+      "version": "1.0",
+      "build": "21",
+      "app": "/tmp/TallyLaunchRelease21-Simulator/Build/Products/Release-iphonesimulator/Tally.app",
+      "log": "/tmp/TallyLaunchRelease21-Simulator-Final.log",
+      "code_signature": "Strict verification passed"
+    }
+  },
+  "installed_simulators": {
+    "iPhone 18 Pro Max": {
+      "device_id": "54FE7359-47BA-48DB-A7F6-A247D24403E5",
+      "build": "21",
+      "launch": "com.asherbloom.Tally: 32839",
+      "appearance": "light",
+      "app": "/Users/asherbloom/Library/Developer/CoreSimulator/Devices/54FE7359-47BA-48DB-A7F6-A247D24403E5/data/Containers/Bundle/Application/39D5CF21-4987-4858-9988-A8E411EEF40E/Tally.app"
+    },
+    "iPad Air 13-inch (M4)": {
+      "device_id": "83A61359-3D0E-4AAE-B2F2-0272F98199E4",
+      "build": "21",
+      "launch": "com.asherbloom.Tally: 32928",
+      "appearance": "light",
+      "app": "/Users/asherbloom/Library/Developer/CoreSimulator/Devices/83A61359-3D0E-4AAE-B2F2-0272F98199E4/data/Containers/Bundle/Application/7F02D1E6-DCAA-48D5-8151-7FC774869EAE/Tally.app"
+    }
+  },
+  "installed_mac_build": "21",
+  "release_build_notes": "All final Release builds succeeded and strict code-signature verification passed. No Swift compiler warnings; Xcode emits the standard skipped AppIntents metadata extraction notice because the app does not use AppIntents.",
+  "verification_notes": [
+    "The result bundles include focused reruns; their counts must not be summed as distinct test cases.",
+    "UI tests use fictional owned fixtures and isolated preference suites. Product Screenshots were not changed.",
+    "Native document-browser toolbar actions use a target/action button and anchored action sheet because an attached UIMenu was not forwarded by the remote browser toolbar.",
+    "Settings uses a multiline native Menu at accessibility text sizes to prevent system Picker label clipping."
+  ]
+}

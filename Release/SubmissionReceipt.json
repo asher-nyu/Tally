@@ -1,0 +1,49 @@
+{
+  "appStoreConnectAppID": "6816792539",
+  "storeName": "Tally: Cash Flow",
+  "version": "1.0",
+  "build": "21",
+  "verifiedAt": "2026-09-29T20:20:49.451076-04:00",
+  "platforms": {
+    "iOS/iPadOS": "Waiting for Review",
+    "macOS": "Waiting for Review"
+  },
+  "submissions": {
+    "iOS/iPadOS": {
+      "id": "273a3c4d-c55f-47a7-a4a5-327c8c665a67",
+      "submittedAtDisplayed": "September 29, 2026 at 8:20 PM America/New_York",
+      "build": "1.0 (21)"
+    },
+    "macOS": {
+      "id": "5a92b018-e41e-4ce6-96e6-0081b82c7fbf",
+      "submittedAtDisplayed": "September 29, 2026 at 8:16 PM America/New_York",
+      "build": "1.0 (21)"
+    }
+  },
+  "releaseMode": "Automatically release after approval",
+  "price": "Free",
+  "source": "Observed App Store Connect accessibility content after submission; selected build and automatic release verified before each submission",
+  "supersedes": {
+    "build": "18",
+    "status": "Removed by developer before review",
+    "recordDirectory": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-27/Tally Build Verification"
+  },
+  "distributionVerification": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-29/Tally Build21 Distribution/Build21DistributionVerification.json",
+  "uploadReceipt": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-29/Tally Build21 Distribution/UploadReceipt.json",
+  "submissionEvidence": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-29/Tally Build21 Distribution/Submission Evidence",
+  "testRecords": [
+    "LaunchSettingsVerification.json",
+    "SoundPaletteVerification.json",
+    "ProductScreenshotVerification.json"
+  ],
+  "screenshots": {
+    "replaced": "Tally-iPhone-03.png",
+    "replacementSHA256": "0cf02c678e451e335aa265dfc067fa8c26e66119e0f514b819794f4e27661b52",
+    "verifiedInAppStoreConnect": true,
+    "otherEightUnchanged": true
+  },
+  "supportURL": "https://tally.asher-nyu.com/",
+  "privacyPolicyURL": "https://tally.asher-nyu.com/privacy",
+  "publicWordingVerified": true,
+  "noReminderBackendAdded": true
+}

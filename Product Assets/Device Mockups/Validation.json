@@ -1,0 +1,20 @@
+{
+  "verified_at_utc": "2026-09-28T04:11:04.028234+00:00",
+  "canvas": {
+    "width": 4000,
+    "height": 2662,
+    "viewBox": "0 0 4000 2662"
+  },
+  "composition": "Overlapping device cluster; laptop behind, iPhone front left, iPad front right. Graphite studio background.",
+  "device_ground_baseline_y": 2255,
+  "embedded_images": 4,
+  "external_image_references": 0,
+  "original_screen_hashes_verified": true,
+  "replacement_roundtrip_byte_identical": true,
+  "visual_browser_review": "Passed; central Mac app content and both mobile screens remain visible; frames and shadows remain within canvas.",
+  "files": {
+    "Tally-Devices.svg": "08decc7fe36b772cc7f51751cce810be8a350ac2a1137eb99f3be2218466481d",
+    "Tally-Devices-Editable.svg": "4331fc104af1b61398401994e9a146deb1b4da0b4f635161782a0ff848e630a9",
+    "Tally-Devices.png": "9dc73d98524e54f9f4163f79de8ab4ceea08a78c3486328299606f37350c8ff6"
+  }
+}
