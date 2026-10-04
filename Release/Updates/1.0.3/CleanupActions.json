@@ -1,0 +1,62 @@
+{
+  "recordedAt": "2026-10-04T03:08:38.224483+00:00",
+  "version": "1.0.3",
+  "build": "24",
+  "submissionConfirmed": true,
+  "alphaPreserved": "/Applications/Tally.app",
+  "gitOperations": false,
+  "removedPaths": [
+    "/Users/asherbloom/Library/Developer/CoreSimulator/Devices/54FE7359-47BA-48DB-A7F6-A247D24403E5/data/Containers/Bundle/Application/DC2CAD4A-78D1-45BF-827E-553167CF9ADF/Tally.app",
+    "/Users/asherbloom/Library/Developer/CoreSimulator/Devices/54FE7359-47BA-48DB-A7F6-A247D24403E5/data/Containers/Bundle/Application/68C62E8F-DFC0-47AA-922A-5CF864AA0E08/TallyUITests-Runner.app",
+    "/Users/asherbloom/Library/Developer/CoreSimulator/Devices/83A61359-3D0E-4AAE-B2F2-0272F98199E4/data/Containers/Bundle/Application/C8CFFB6B-59F8-465D-8DB4-FC3A0AE35C4E/Tally.app",
+    "/Users/asherbloom/Library/Developer/CoreSimulator/Devices/83A61359-3D0E-4AAE-B2F2-0272F98199E4/data/Containers/Bundle/Application/FC91B143-1F6B-45C3-8C41-BE0B5B644258/TallyUITests-Runner.app",
+    "/var/folders/54/_fsmdvxd58j1g7w30vpzrb1c0000gn/T/XcodeDistPipeline.~~~q9QT2k/Root/Payload/Tally.app",
+    "/var/folders/54/_fsmdvxd58j1g7w30vpzrb1c0000gn/T/XcodeDistPipeline.~~~saeA3S/Root/Payload/Tally.app",
+    "/var/folders/54/_fsmdvxd58j1g7w30vpzrb1c0000gn/T/XcodeDistPipeline.~~~uAsxeM/Root/Payload/Tally.app",
+    "/var/folders/54/_fsmdvxd58j1g7w30vpzrb1c0000gn/T/XcodeDistPipeline.~~~At9dKV/Root/Applications/Tally.app",
+    "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally iOS 1.0.3 (24).xcarchive",
+    "/private/tmp/TallyLaunchPatch24-iOS",
+    "/private/tmp/TallyLaunchPatch24-Release",
+    "/var/folders/54/_fsmdvxd58j1g7w30vpzrb1c0000gn/T/XcodeDistPipeline.~~~PftdZ2/Root/Payload/Tally.app"
+  ],
+  "simulatorUninstalls": [
+    {
+      "udid": "54FE7359-47BA-48DB-A7F6-A247D24403E5",
+      "bundleIdentifier": "com.asherbloom.Tally",
+      "absent": true
+    },
+    {
+      "udid": "54FE7359-47BA-48DB-A7F6-A247D24403E5",
+      "bundleIdentifier": "com.asherbloom.TallyUITests.xctrunner",
+      "absent": true
+    },
+    {
+      "udid": "83A61359-3D0E-4AAE-B2F2-0272F98199E4",
+      "bundleIdentifier": "com.asherbloom.Tally",
+      "absent": true
+    },
+    {
+      "udid": "83A61359-3D0E-4AAE-B2F2-0272F98199E4",
+      "bundleIdentifier": "com.asherbloom.TallyUITests.xctrunner",
+      "absent": true
+    }
+  ],
+  "launchServicesUnregistrations": [
+    "/var/folders/54/_fsmdvxd58j1g7w30vpzrb1c0000gn/T/XcodeDistPipeline.~~~q9QT2k/Root/Payload/Tally.app",
+    "/var/folders/54/_fsmdvxd58j1g7w30vpzrb1c0000gn/T/XcodeDistPipeline.~~~saeA3S/Root/Payload/Tally.app",
+    "/var/folders/54/_fsmdvxd58j1g7w30vpzrb1c0000gn/T/XcodeDistPipeline.~~~uAsxeM/Root/Payload/Tally.app",
+    "/var/folders/54/_fsmdvxd58j1g7w30vpzrb1c0000gn/T/XcodeDistPipeline.~~~At9dKV/Root/Applications/Tally.app",
+    "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally iOS 1.0.3 (24).xcarchive/Products/Applications/Tally.app",
+    "/private/tmp/TallyLaunchPatch24-iOS/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+    "/private/tmp/TallyLaunchPatch24-iOS/Build/Products/Debug-iphonesimulator/Tally.app",
+    "/var/folders/54/_fsmdvxd58j1g7w30vpzrb1c0000gn/T/XcodeDistPipeline.~~~PftdZ2/Root/Payload/Tally.app"
+  ],
+  "compressedArchive": {
+    "path": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally iOS 1.0.3 (24).xcarchive.zip",
+    "sha256": "955c3a0f7746bad8c8ee2738a79604dec4adfa08e94af125a0b4820fb7c58fe5",
+    "filesVerified": 18
+  },
+  "alphaReceiptAndExecutableUnchanged": true,
+  "alphaStrictSignatureVerified": true,
+  "updatedAt": "2026-10-04T03:10:13.045970+00:00"
+}

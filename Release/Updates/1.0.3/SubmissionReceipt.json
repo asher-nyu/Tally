@@ -1,0 +1,20 @@
+{
+  "appId": "6816792539",
+  "bundleIdentifier": "com.asherbloom.Tally",
+  "platform": "iOS and iPadOS",
+  "version": "1.0.3",
+  "build": "24",
+  "whatsNew": "Bug fixes and improvements.",
+  "status": "Waiting for Review",
+  "submissionId": "6b8cb9e0-396c-4465-a7d5-e8b86e032ba7",
+  "appStoreConnectURL": "https://appstoreconnect.apple.com/apps/6816792539/distribution/reviewsubmissions/details/6b8cb9e0-396c-4465-a7d5-e8b86e032ba7",
+  "verifiedAt": "2026-10-04T03:07:55.950565+00:00",
+  "uploadResult": "Succeeded",
+  "reviewSubmissionConfirmed": true,
+  "gitOperations": false,
+  "betaCleanupComplete": true,
+  "sourceVerification": "/Users/asherbloom/Downloads/Tally/Release/Updates/1.0.3/Verification.json",
+  "evidenceFolder": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3",
+  "betaCleanupVerifiedAt": "2026-10-04T03:12:11.292835+00:00",
+  "cleanupVerification": "/Users/asherbloom/Downloads/Tally/Release/Updates/1.0.3/InstallationCleanupVerification.json"
+}

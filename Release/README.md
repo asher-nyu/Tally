@@ -43,13 +43,30 @@ Vercel hosts the static site at `tally.asher-nyu.com`. [website/vercel.json](web
 
 These checks cover the public pages. They do not assert physical-device iCloud validation, a complete accessibility audit, or App Review approval.
 
-## Submitted build 21
+## iPhone and iPad update 1.0.2
+
+Version **1.0.2 (23)** makes the filename plain text on iPhone and iPad. Rename and
+Share are available in the … menu alongside Settings and Privacy & Support.
+Renaming uses the native document browser and preserves the `.tally` extension.
+
+Version **1.0.2 (23)** was submitted on October 3, 2026 at 11:05 AM Eastern Time
+and showed **Waiting for Review**, with automatic release after approval. The
+What’s New wording is unchanged: “Bug fixes and improvements.”
+
+The final iPhone and iPad simulator runs passed 376 cases on each device. All 251
+Mac unit tests passed. The App Store package passed signature and production
+iCloud entitlement checks. [Verification.json](Updates/1.0.2/Verification.json)
+records the build and checks; [SubmissionReceipt.json](Updates/1.0.2/SubmissionReceipt.json)
+records the submission. Verification of the approved App Store installation on
+the user’s physical device remains pending.
+
+## Initial submission, build 21
 
 Version **1.0 (21)** was submitted for iOS/iPadOS and macOS on September 29, 2026.
-Both platforms show **Waiting for Review** and will release automatically after
+At submission, both platforms showed **Waiting for Review**, with automatic release after
 approval. The previous build 18 submissions were removed by the developer before
 review. [Submission.md](Submission.md) and [SubmissionReceipt.json](SubmissionReceipt.json)
-record the current submissions and verification.
+record those initial submissions and their verification.
 
 Settings provides a per-device launch choice, with **Open last
 used file** selected by default and **Show file browser** available as an alternative.

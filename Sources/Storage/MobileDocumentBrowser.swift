@@ -56,6 +56,9 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
     private var receivedDirectOpenRequest = false
     private var openRequestOrder = MobileOpenRequestOrder()
     private var launchTask: Task<Void, Never>?
+    private var launchCover: UIView?
+    private var launchAccessibilityElements: [Any]?
+    private var didFinishLaunchPresentation = false
     private let lastFileStore = MobileLastUsedFileStore(defaults: MobileLaunchEnvironment.defaults)
     nonisolated private static let fileQueue = DispatchQueue(label: "com.asherbloom.Tally.mobile-last-file", qos: .utility)
     private var lastRecordedURL: URL?
@@ -82,6 +85,58 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
     }
 
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        guard MobileLaunchEnvironment.isEnabled, !didFinishLaunchPresentation else { return }
+        let behavior = TallyLaunchBehavior(rawValue: MobileLaunchEnvironment.defaults.string(forKey: TallyLaunchBehavior.preferenceKey) ?? "") ?? .lastUsedFile
+        guard behavior == .lastUsedFile else { return }
+        // The browser must appear before it can present an editor. Cover that
+        // first appearance while resolving and opening the previous file.
+        let cover = UIView(frame: view.bounds)
+        cover.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        cover.backgroundColor = .systemBackground
+        cover.isAccessibilityElement = true
+        cover.accessibilityLabel = "Opening Tally"
+        cover.accessibilityIdentifier = "tallyLaunchCover"
+        cover.accessibilityViewIsModal = true
+        let indicator = UIActivityIndicatorView(style: .medium)
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        cover.addSubview(indicator)
+        NSLayoutConstraint.activate([
+            indicator.centerXAnchor.constraint(equalTo: cover.centerXAnchor),
+            indicator.centerYAnchor.constraint(equalTo: cover.centerYAnchor)
+        ])
+        indicator.startAnimating()
+        launchAccessibilityElements = view.accessibilityElements
+        view.addSubview(cover)
+        // The system browser publishes accessibility through its hosted view.
+        // Explicitly expose only the loading screen until launch is settled.
+        view.accessibilityElements = [cover]
+        launchCover = cover
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        // UIDocumentBrowser hosts a system view service, which can add its
+        // browser content after our initial view has loaded.
+        if let launchCover {
+            view.bringSubviewToFront(launchCover)
+            view.accessibilityElements = [launchCover]
+        }
+    }
+
+    private func finishLaunchPresentation() {
+        // A scene URL can finish or fail before UIKit loads this view. Once
+        // launch is settled, loading the browser must not install a new cover.
+        didFinishLaunchPresentation = true
+        if launchCover != nil {
+            view.accessibilityElements = launchAccessibilityElements
+            launchAccessibilityElements = nil
+        }
+        launchCover?.removeFromSuperview()
+        launchCover = nil
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -157,7 +212,7 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
 
     /// Explicit Files/URL opens take priority over any cold-launch restoration.
     func requestExternalFile(_ url: URL) {
-        cancelLaunchRestoration()
+        cancelLaunchRestoration(preservingLaunchCover: true)
         let request = openRequestOrder.request(url)
         externalRevealSources.insert(url)
         Task { [weak self] in
@@ -171,16 +226,18 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
                 performOpen(.init(url: revealedURL, generation: request.generation))
             } catch {
                 guard openRequestOrder.isCurrent(request) else { return }
+                finishLaunchPresentation()
                 showError("Couldn’t Open File", message: error.localizedDescription)
             }
         }
     }
 
-    func cancelLaunchRestoration() {
+    func cancelLaunchRestoration(preservingLaunchCover: Bool = false) {
         receivedDirectOpenRequest = true
         didApplyLaunchPreference = true
         launchTask?.cancel()
         openRequestOrder.invalidate()
+        if !preservingLaunchCover { finishLaunchPresentation() }
     }
 
     @objc private func presentBrowserOptions() {
@@ -214,13 +271,23 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
     private func applyLaunchPreferenceIfNeeded() {
         guard !didApplyLaunchPreference else { return }
         didApplyLaunchPreference = true
-        guard MobileLaunchEnvironment.isEnabled else { return }
+        guard MobileLaunchEnvironment.isEnabled else {
+            finishLaunchPresentation()
+            return
+        }
         let behavior = TallyLaunchBehavior(rawValue: MobileLaunchEnvironment.defaults.string(forKey: TallyLaunchBehavior.preferenceKey) ?? "") ?? .lastUsedFile
-        guard behavior == .lastUsedFile else { return }
+        guard behavior == .lastUsedFile else {
+            finishLaunchPresentation()
+            return
+        }
         launchTask = Task { [weak self] in
             guard let self else { return }
             // Allow an explicit scene URL delivered during launch to claim it.
             await Task.yield()
+            #if DEBUG
+            if MobileLaunchTestSupport.isEnabled { launchCover?.accessibilityValue = "resolving" }
+            await MobileLaunchTestSupport.delayRestorationIfRequested()
+            #endif
             guard !Task.isCancelled, !receivedDirectOpenRequest else { return }
             let access = await resolveLastFile()
             guard !Task.isCancelled, !receivedDirectOpenRequest,
@@ -228,7 +295,10 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
                 access?.stopAccessing()
                 return
             }
-            guard let access else { return }
+            guard let access else {
+                finishLaunchPresentation()
+                return
+            }
             performOpen(openRequestOrder.request(access.url), restoring: true, restoredAccess: access)
         }
     }
@@ -289,6 +359,12 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
         let document = MobileTallyDocument(opening: url)
         Task { [self] in
             let opened = await document.open()
+            #if DEBUG
+            if opened, launchCover != nil, MobileLaunchTestSupport.isEnabled {
+                launchCover?.accessibilityValue = "presenting"
+                await MobileLaunchTestSupport.delayEditorPresentationIfRequested()
+            }
+            #endif
             if !openRequestOrder.isCurrent(request) {
                 if opened { _ = await document.closeFile() }
                 openingFile = false
@@ -299,6 +375,7 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
             guard opened else {
                 openingFile = false
                 restoredAccess?.stopAccessing()
+                finishLaunchPresentation()
                 if !restoring {
                     showError("Couldn’t Open File", message: "The file couldn’t be opened. Check that it is available and try again.")
                 }
@@ -310,6 +387,10 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
             editor.restoredAccess = restoredAccess
             editor.onLocationChange = { [weak self] in self?.rememberFile($0) }
             editor.onSceneActivated = { [weak self] in self?.rememberFile($0, force: true) }
+            editor.onRename = { [weak self] url, name in
+                guard let self else { throw CancellationError() }
+                return try await renameDocument(at: url, proposedName: name)
+            }
             if view.window?.windowScene?.activationState == .foregroundActive {
                 rememberFile(document.fileURL)
             }
@@ -347,7 +428,7 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
                             performOpen(nextRequest)
                         } else {
                             #if DEBUG
-                            if document.isRemoved { testFixture?.cleanup() }
+                            if document.isRemoved || MobileDocumentTestSupport.isFileActionsEnabled { testFixture?.cleanup() }
                             #endif
                         }
                     }
@@ -364,10 +445,20 @@ final class TallyDocumentBrowserController: UIDocumentBrowserViewController, UID
             activeEditor = editor
             navigation.modalPresentationStyle = .fullScreen
             navigation.isModalInPresentation = true
+            // A cold launch replaces the neutral cover directly. File choices
+            // made from the visible browser retain their normal transition.
+            let animatePresentation = !restoring && launchCover == nil
+            let presentEditor: () -> Void = { [weak self] in
+                guard let self else { return }
+                present(navigation, animated: animatePresentation) { [weak self] in
+                    guard let self, openRequestOrder.isCurrent(request) else { return }
+                    finishLaunchPresentation()
+                }
+            }
             if presentedViewController != nil {
-                dismiss(animated: false) { [weak self] in self?.present(navigation, animated: true) }
+                dismiss(animated: false, completion: presentEditor)
             } else {
-                present(navigation, animated: true)
+                presentEditor()
             }
             document.startWatching()
         }
@@ -421,7 +512,13 @@ private final class MobileDocumentEditorController: UIViewController, UIDocument
     private lazy var addButton = UIBarButtonItem(systemItem: .add, primaryAction: UIAction { [weak self] _ in
         self?.commands.addPayment()
     })
-    private lazy var optionsButton = makeTallyOptionsButton()
+    private lazy var renameAction = UIAction(title: "Rename", image: UIImage(systemName: "pencil"), identifier: UIAction.Identifier("tallyRenameFile")) { [weak self] _ in
+        self?.presentRename()
+    }
+    private lazy var shareAction = UIAction(title: "Share", image: UIImage(systemName: "square.and.arrow.up"), identifier: UIAction.Identifier("tallyShareFile")) { [weak self] _ in
+        self?.shareFile()
+    }
+    private lazy var optionsButton = makeTallyOptionsButton(fileActions: [renameAction, shareAction])
     private lazy var searchController: UISearchController = {
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self
@@ -435,10 +532,13 @@ private final class MobileDocumentEditorController: UIViewController, UIDocument
     private var recoveryDirectory: URL?
     private var activationObserver: NSObjectProtocol?
     private var sceneActivationObserver: NSObjectProtocol?
+    private var renameAlert: UIAlertController?
+    private var isRenaming = false
     var onClose: ((URL?, Bool) -> Void)?
     var onSwitchFile: ((MobileOpenRequestOrder.Ticket) -> Void)?
     var onLocationChange: ((URL) -> Void)?
     var onSceneActivated: ((URL) -> Void)?
+    var onRename: ((URL, String) async throws -> URL)?
     var fileAccess: MobileDocumentAccess?
     var restoredAccess: MobileLastUsedFileStore.ResolvedFile?
     var fileURL: URL { tallyDocument.fileURL }
@@ -492,21 +592,15 @@ private final class MobileDocumentEditorController: UIViewController, UIDocument
     private func updateNavigation() {
         navigationItem.title = fileURL.deletingPathExtension().lastPathComponent
         navigationItem.style = .editor
-        if tallyDocument.isRemoved {
-            navigationItem.renameDelegate = nil
-            navigationItem.documentProperties = nil
-            navigationItem.titleMenuProvider = nil
-        } else {
-            let properties = UIDocumentProperties(url: fileURL)
-            properties.activityViewControllerProvider = { [weak self] in
-                guard let self, !tallyDocument.isRemoved else { return UIActivityViewController(activityItems: [], applicationActivities: nil) }
-                return UIActivityViewController(activityItems: [fileURL], applicationActivities: nil)
-            }
-            navigationItem.documentProperties = properties
-            navigationItem.titleMenuProvider = nil
-            if viewIfLoaded?.window?.windowScene?.activationState == .foregroundActive {
-                onLocationChange?(fileURL)
-            }
+        // File actions belong to the More menu. Supplying any of these native
+        // document hooks would turn the filename back into a preview button.
+        navigationItem.renameDelegate = nil
+        navigationItem.documentProperties = nil
+        navigationItem.titleMenuProvider = nil
+        renameAction.attributes = tallyDocument.isRemoved || tallyDocument.editingDisabled || isRenaming ? [.disabled] : []
+        shareAction.attributes = tallyDocument.isRemoved || isRenaming ? [.disabled] : []
+        if !tallyDocument.isRemoved, viewIfLoaded?.window?.windowScene?.activationState == .foregroundActive {
+            onLocationChange?(fileURL)
         }
         // UIKit supplies the native chevron; the browser owns its presentation.
         navigationItem.backAction = UIAction(title: "Files", image: UIImage(systemName: "chevron.backward")) { [weak self] _ in
@@ -549,10 +643,86 @@ private final class MobileDocumentEditorController: UIViewController, UIDocument
         commands.searchText = searchController.searchBar.text ?? ""
     }
 
+    private func presentRename() {
+        guard !tallyDocument.isRemoved, !tallyDocument.editingDisabled, !isRenaming,
+              presentedViewController == nil else { return }
+        let alert = UIAlertController(title: "Rename File", message: nil, preferredStyle: .alert)
+        alert.addTextField { [weak self] field in
+            field.text = self?.fileURL.deletingPathExtension().lastPathComponent
+            field.accessibilityIdentifier = "renameFileName"
+            field.autocorrectionType = .no
+            field.clearButtonMode = .whileEditing
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel) { [weak self] _ in self?.renameAlert = nil })
+        let rename = UIAlertAction(title: "Rename", style: .default) { [weak self, weak alert] _ in
+            guard let self, let alert, let name = alert.textFields?.first?.text else { return }
+            renameAlert = nil
+            alert.dismiss(animated: true) { [weak self] in
+                self?.renameFile(to: name)
+            }
+        }
+        rename.accessibilityIdentifier = "renameFileConfirm"
+        alert.addAction(rename)
+        alert.preferredAction = rename
+        renameAlert = alert
+        present(alert, animated: true) { [weak alert] in alert?.textFields?.first?.selectAll(nil) }
+    }
+
+    private func renameFile(to name: String) {
+        guard !tallyDocument.isRemoved, !tallyDocument.editingDisabled, !isRenaming,
+              let onRename else { return }
+        let proposedName: String
+        // The document browser preserves the file's existing extension.
+        do { proposedName = try TallyFileName.baseName(from: name) }
+        catch { showError("Couldn’t Rename File", message: error.localizedDescription); return }
+        let sourceURL = fileURL
+        guard proposedName != sourceURL.deletingPathExtension().lastPathComponent else { return }
+        isRenaming = true
+        updateNavigation()
+        Task { [weak self] in
+            do {
+                let renamedURL = try await onRename(sourceURL, proposedName)
+                guard let self else { return }
+                isRenaming = false
+                guard !tallyDocument.documentState.contains(.closed), viewIfLoaded?.window != nil else { return }
+                guard !tallyDocument.isRemoved, fileURL == sourceURL || fileURL == renamedURL else {
+                    updateNavigation()
+                    return
+                }
+                let renamedAccess = MobileDocumentAccess(url: renamedURL)
+                if fileURL != renamedURL { tallyDocument.presentedItemDidMove(to: renamedURL) }
+                fileAccess = renamedAccess
+                tallyDocument.checkAfterActivation()
+                updateNavigation()
+            } catch {
+                guard let self else { return }
+                isRenaming = false
+                updateNavigation()
+                let cocoaError = error as NSError
+                guard !(error is CancellationError), !tallyDocument.documentState.contains(.closed),
+                      !(cocoaError.domain == NSCocoaErrorDomain && cocoaError.code == NSUserCancelledError),
+                      !tallyDocument.isRemoved, viewIfLoaded?.window != nil else { return }
+                showError("Couldn’t Rename File", message: error.localizedDescription)
+            }
+        }
+    }
+
+    private func shareFile() {
+        guard !tallyDocument.isRemoved, !isRenaming, presentedViewController == nil else { return }
+        let activity = UIActivityViewController(activityItems: [fileURL], applicationActivities: nil)
+        activity.popoverPresentationController?.sourceItem = optionsButton
+        present(activity, animated: true)
+    }
+
     private func refreshAvailability() {
         content?.rootView = contentView()
         updateNavigation()
         if tallyDocument.isRemoved {
+            if let renameAlert {
+                self.renameAlert = nil
+                renameAlert.dismiss(animated: false) { [weak self] in self?.presentDeletionAlert() }
+                return
+            }
             presentDeletionAlert()
         } else {
             let previous = deletionAlert
@@ -567,7 +737,7 @@ private final class MobileDocumentEditorController: UIViewController, UIDocument
     }
 
     private func presentDeletionAlert(message: String? = nil) {
-        guard isViewLoaded, view.window != nil, deletionAlert == nil, recoveryPicker == nil else { return }
+        guard tallyDocument.isRemoved, isViewLoaded, view.window != nil, deletionAlert == nil, recoveryPicker == nil else { return }
         let closesWindow = UIDevice.current.userInterfaceIdiom == .pad && UIApplication.shared.supportsMultipleScenes
         let alert = UIAlertController(title: "File Deleted", message: message ?? "Recover a copy to keep working, or close this \(closesWindow ? "window" : "file").", preferredStyle: .alert)
         let recover = UIAlertAction(title: "Recover File", style: .default) { [weak self] _ in
@@ -667,7 +837,7 @@ private final class MobileDocumentHostingController: UIHostingController<AnyView
 }
 
 private extension UIViewController {
-    func makeTallyOptionsButton() -> UIBarButtonItem {
+    func makeTallyOptionsButton(fileActions: [UIMenuElement] = []) -> UIBarButtonItem {
         let settings = UIAction(title: "Settings", image: UIImage(systemName: "gearshape"), identifier: UIAction.Identifier("tallySettings")) { [weak self] _ in
             (self as? TallyDocumentBrowserController)?.cancelLaunchRestoration()
             self?.presentTallySettings()
@@ -676,7 +846,11 @@ private extension UIViewController {
             (self as? TallyDocumentBrowserController)?.cancelLaunchRestoration()
             self?.presentPrivacySupport()
         }
-        let button = UIBarButtonItem(title: "Tally options", image: UIImage(systemName: "ellipsis"), primaryAction: nil, menu: UIMenu(children: [settings, privacy]))
+        let children: [UIMenuElement] = fileActions.isEmpty ? [settings, privacy] : [
+            UIMenu(options: .displayInline, children: fileActions),
+            UIMenu(options: .displayInline, children: [settings, privacy])
+        ]
+        let button = UIBarButtonItem(title: "Tally options", image: UIImage(systemName: "ellipsis"), primaryAction: nil, menu: UIMenu(children: children))
         button.accessibilityIdentifier = "tallyOptionsButton"
         button.accessibilityLabel = "Tally options"
         return button

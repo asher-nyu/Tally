@@ -1,0 +1,379 @@
+{
+  "recordedAt": "2026-10-04T02:57:13.589979+00:00",
+  "version": "1.0.3",
+  "build": "24",
+  "ipa": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally Build24 Distribution/iOS/Tally.ipa",
+  "archive": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally iOS 1.0.3 (24).xcarchive",
+  "gitOperations": false,
+  "sourceManifestSHA256": "670ba161499b1eba285129af1040f9ca951c629402b15151c83f74e058ce27b0",
+  "sourceSHA256": {
+    "Sources/TallyApp.swift": "6cea26b5f247c9b68f8d9280051c815955d391884dca328026d0dc3d7fcc22f0",
+    "Sources/TallyDocument.swift": "db5de97df1685c47943d4ee6ab03bff24009c6b0f04a2911c6e18b57c1250a03",
+    "Sources/ContentView.swift": "023dfbf893fda3821a5a13b8841e0383a6ff925e11ea03ae1626c6569948d70d",
+    "Sources/Storage/NativeDocumentTestSupport.swift": "bc469adfc26025338853ab4b5002faa7dffbeb59510238a1cb6698c2e170cd1d",
+    "Sources/Storage/MobileLastUsedFileStore.swift": "52dcaca5c233a8e40c2cdfecd7c17a4189ff15e3edfc87e3521869dba622fbe3",
+    "Sources/Storage/MobileDocumentTestSupport.swift": "7e078b329e7f528d915e0782c09af2e235ba4c25a2f27210f8c4304a097a74f6",
+    "Sources/Storage/MacLastUsedFileStore.swift": "907403680b7ba1294da46a373de4ae1d4f9930d723a48e1f6e44d5761e424e11",
+    "Sources/Storage/MacLaunchCoordinator.swift": "f8e4f24bf9305ea6478b99ccaf8f9d5d986299f7b452b014ad3dc9482153c7fd",
+    "Sources/Storage/MobileLaunchTestSupport.swift": "a4a03ff3c58d9366fcabdf751ae361cd55b5e300329fb714ab87a6e376ee6340",
+    "Sources/Storage/MacDocumentDeletedAlert.swift": "1e523eaa5cdf1c7e6d185cb9dc38cd56a79fa0dca06e8fd94f4c68b3e901815d",
+    "Sources/Storage/MacDocumentLocation.swift": "8109406bf5d926625f6329e6e0b5621c0d14efec3c8fd9c5222d51b6525f2fc1",
+    "Sources/Storage/MacLaunchTestSupport.swift": "8849c8f06d62237d44041a641dad2abbf484d335b29ec0bec4f0d6705fa2f895",
+    "Sources/Storage/CloudDocuments.swift": "e73a5e78287deef195f122e8c45d9779510c587bddd0d645c80d14fe0f267e52",
+    "Sources/Storage/MobileTallyDocument.swift": "1915b5b2bf6dd8def17d8f0b11c865da2311fa89845b19027816e9cf376dd8c8",
+    "Sources/Storage/MacDocumentLifetime.swift": "2146b7f4778f3c33132e27c5b4e89683d3faafc216a862bc300ec437e5527d06",
+    "Sources/Storage/MobileDocumentBrowser.swift": "354986f3235198cede50c3489a682417c20f18a83a31aa8dc87122c609b11bb0",
+    "Sources/Storage/MobileLaunchEnvironment.swift": "8cf556528878604a594e662523a66dcabe7d77cb4e4729130ad0b87b655ed0b4",
+    "Sources/Views/ReminderSection.swift": "589dc6bb82bd06e0f2b7b8f7bf57fc8b772c135922e0326d0ae7a75dc215a8b5",
+    "Sources/Views/ScheduleDatePicker.swift": "acf440c073189300ed66778ac55447c02ba7e2d783b1089f915fc1e256f780d5",
+    "Sources/Views/ExpenseScheduleDescription.swift": "ece5fc35c7158cefe347a0c39c902124b0c28cba58cfad5f51fe71515f4bbe41",
+    "Sources/Views/ExpenseEditorView.swift": "32e9d1bf358a4d453b2cdbe4646940c0f42fe494d5c6a3d86c37c7775227deb8",
+    "Sources/Views/PrivacySupportView.swift": "0a7f0cf3e4172a913a6a72237c9aaa8955f5100e51bee248cdaf93b445622d7d",
+    "Sources/Views/LedgerOverviewView.swift": "e549c7686e31b52c96defd6e7dbb71fff2f30daf3907c4ddbf51eab492f7beef",
+    "Sources/Views/TallySettingsView.swift": "4acd59ce3366eb9e5cb2e6ac64444bc0633ee1dc2a3b8dcb9d91ff9bf9d9d80c",
+    "Sources/Views/CustomRecurrenceView.swift": "eb507397fac8b24491695c1144c39b432a105d7b463056974c655a9c7c5a9885",
+    "Sources/Views/MacMenuPicker.swift": "91bd44bfe79d12ce2ab9eb5d1a10462adb6823455c2301d669932e8332707bb2",
+    "Sources/Views/WindowAccessibilityLabel.swift": "364d6f29b41f6c889afeab0ac1755d9125e6a9dbcd5f55c333866d4f4931bd6b",
+    "Sources/Views/MacRowContextMenu.swift": "cdb21b954e5719da87dbcfb2285ae4d7f146d5cb6ef170745b4185095419ee78",
+    "Sources/Views/ExpenseRowView.swift": "58d6f3323a8811766cc3e2aa3c5cf728e053a7759d19dce57b10c8e0def9976e",
+    "Sources/Domain/ProviderLink.swift": "38b6d32bebfc003009d0730960f171c280c504f130f123921e89339f0cf471f0",
+    "Sources/Domain/LedgerCodec.swift": "fcb23969eae93cf9c1d3714b32390774ac39800cd1136cef6d0bb905e9cbd558",
+    "Sources/Domain/TallyLaunchBehavior.swift": "6a7fe80c9674844c29872db916872857e2545c49d9d24752a69e1abb78c775da",
+    "Sources/Domain/Money.swift": "ec0af2fb73f1e411a5f19def48271b0baaa7a423f715d51405a4205c511d7fe3",
+    "Sources/Domain/Ledger.swift": "4961fc18f4ae33718d72291a5bf82d8aaa5391bdbcc424b7884e85453b2cc814",
+    "Sources/Domain/PaymentReminder.swift": "a9ef795c73ddfd4730708c91178de201aec236e436b675fc2cb93667ce0e8597",
+    "Sources/Domain/CustomRecurrence.swift": "cd1b2032469f2734d45ee5cef89885c9574e984f95d68dab9aa1084c7feedb18",
+    "Sources/Domain/TallyFileName.swift": "1bcc66c74c23eb95f12e087f993cf6d212b63aaf96e6d4c5f38765ac6819c289",
+    "Sources/Domain/MobileOpenRequestOrder.swift": "ae9ffd8e1416bba89ee749485ef335b5e61e5e854add75595cba07fa631c33fa",
+    "Sources/Domain/LedgerMerger.swift": "f3731476447490d3fc1ce4d49aad80975a40399de4fe7d7a5534b0c5a6d97095",
+    "Sources/Services/NotificationSettingsOpener.swift": "d7e6289666f9aa4b958edef34a18a6b1bccd73f26c3ca153c8f635a6ac36d33f",
+    "Sources/Services/NotificationCoordinator.swift": "0a9d45ed2bc23e087b2a81d811e9f6db22d3ee253c922020c8a1cef2c80ff5c1",
+    "Sources/Services/ProviderWebsiteOpener.swift": "6655154365a8b28b15bdcea27db023dc9e941529934a53ff8e0823310e187b83",
+    "Sources/Services/ReminderSoundPreview.swift": "dbbdd6b98683a0ceb3f9254eb8e5aabb394f411e9603d456a1206d8fa525c04f",
+    "Sources/Services/ReminderBackgroundRefresh.swift": "b9d827ce7c223931c56f0e02c07e117d2fee278f59e9e66294d0335c2daf888c",
+    "Tally.xcodeproj/project.pbxproj": "e39e30abbbb38c621aa5681fc2a9c26d9011c9d1012cfeb470ca4f0c78caaade",
+    "Tests/UI/MobileLaunchSettingsUITests.swift": "efe715db76476e87003df0bc398d2a476c56d1b2bfa72213f12a8a3b4d46c23d"
+  },
+  "ipaSHA256": "bd9881ee169157e0cfe134ef4f5daf2737d608408ccfe5c8cf92ba216bd4ee65",
+  "signingAuthorities": [
+    "Apple Distribution: Asher  Bloom (Q5VAMXPYZN)",
+    "Apple Worldwide Developer Relations Certification Authority",
+    "Apple Root CA"
+  ],
+  "entitlements": {
+    "application-identifier": "Q5VAMXPYZN.com.asherbloom.Tally",
+    "beta-reports-active": true,
+    "com.apple.developer.icloud-container-environment": "Production",
+    "com.apple.developer.icloud-container-identifiers": [
+      "iCloud.com.asherbloom.Tally"
+    ],
+    "com.apple.developer.icloud-services": [
+      "CloudDocuments"
+    ],
+    "com.apple.developer.team-identifier": "Q5VAMXPYZN",
+    "com.apple.developer.ubiquity-container-identifiers": [
+      "iCloud.com.asherbloom.Tally"
+    ],
+    "get-task-allow": false
+  },
+  "profile": {
+    "name": "iOS Team Store Provisioning Profile: com.asherbloom.Tally",
+    "uuid": "09b8e94c-c7bb-408f-895e-0be1b61f149a",
+    "expires": "2027-06-04T07:53:00",
+    "kind": "App Store"
+  },
+  "debugMarkersFound": [],
+  "binaryIdentity": {
+    "materializedSectionCount": 37,
+    "architecture": "arm64",
+    "uuids": [
+      "032794516d8238a99f29f22ecbc45903"
+    ],
+    "sections": {
+      "__TEXT,__text": {
+        "size": 894160,
+        "sha256": "3066cf24607481ea7ceff37c5177427bd2ad5b1bbc3f0a6849ed9ecba48bbaa5"
+      },
+      "__TEXT,__stubs": {
+        "size": 10572,
+        "sha256": "e95a4926f26f270fab532d1b10ecce9ca71a01be5bf8f6da8994e5f0a6c2f7d3"
+      },
+      "__TEXT,__objc_stubs": {
+        "size": 6048,
+        "sha256": "58204e86f5ba2f3645f239331d12e8242e7658c8a9afb5a4a013a99fe43eaff3"
+      },
+      "__TEXT,__objc_methlist": {
+        "size": 1044,
+        "sha256": "c9823830fa86ba775bb57b31229406ffd5529db2a4ee6dd008c11e076d3f8960"
+      },
+      "__TEXT,__const": {
+        "size": 26340,
+        "sha256": "421736a6f6baf554b4100d3e4160191ea8a7daea5662d9998260d1c2b4499ee0"
+      },
+      "__TEXT,__swift5_typeref": {
+        "size": 143782,
+        "sha256": "a8948897ffe62f64fbd6de0e8d5e2b4d4eabd4f898e8ddddf5badd97089e52cd"
+      },
+      "__TEXT,__swift5_reflstr": {
+        "size": 6135,
+        "sha256": "0dcf3004053ffb7d9fa734aa33650ff276300c63d0f9a21111bc6a478cc3e254"
+      },
+      "__TEXT,__swift5_assocty": {
+        "size": 1400,
+        "sha256": "677236cf655d0aec5f46bf0e352a4847c99a24b6e4da4f35ee263f272d588da3"
+      },
+      "__TEXT,__constg_swiftt": {
+        "size": 4796,
+        "sha256": "a90d1e7f4bcdcc1b875d346f3fa97d8e3ba1ddcfcf86abcc396c01bd4b7ba93d"
+      },
+      "__TEXT,__swift5_fieldmd": {
+        "size": 6740,
+        "sha256": "e4293ed4659c95fc893c33ff0d9ee5f1fdfa9cfdc5ebd30e743407fe63b5da4b"
+      },
+      "__TEXT,__cstring": {
+        "size": 12663,
+        "sha256": "477384df9a9da5a488467bb312bb52cf512f111a2e85c4b6de991db079b25584"
+      },
+      "__TEXT,__swift5_proto": {
+        "size": 784,
+        "sha256": "f94709f26e7900e31d49d808b23b18cdc7fef5db81e1f744b88465e52aa33329"
+      },
+      "__TEXT,__swift5_types": {
+        "size": 404,
+        "sha256": "6099536f7a6762a314d123bd3f718c251f5968281869c95a77b0ca9d76177958"
+      },
+      "__TEXT,__swift5_builtin": {
+        "size": 100,
+        "sha256": "3b20abe0242d911ca89fd215214573ff9febb55d5aa53689a730ac83c0dd8e1e"
+      },
+      "__TEXT,__swift5_mpenum": {
+        "size": 8,
+        "sha256": "9c5c64a2b5d402ed2dcc8b2b146393c9ad35a5cd1acd342489e6ca22fb947f99"
+      },
+      "__TEXT,__swift5_capture": {
+        "size": 5764,
+        "sha256": "76533dfc38e5005907c1017276dd10993d76f84f9174ce909b14887463712687"
+      },
+      "__TEXT,__objc_methname": {
+        "size": 8581,
+        "sha256": "965af8133b1cfae118373e73da4fb67f1c4ad9fb779393d5b871ee4e5b109fe4"
+      },
+      "__TEXT,__objc_classname": {
+        "size": 1124,
+        "sha256": "ce6357aa9ebcce685af87926fd4697c54656379a3b51d07c67cd895fc4f19c9c"
+      },
+      "__TEXT,__objc_methtype": {
+        "size": 1730,
+        "sha256": "e070c78b10301523ff05d22c8dda53d1349614a1f212bcd6b196fb33decb4021"
+      },
+      "__TEXT,__swift_as_entry": {
+        "size": 376,
+        "sha256": "9368bd74bf81c42385db842b31e9338763fde1ea159b0a3744439aaab53feadf"
+      },
+      "__TEXT,__swift_as_ret": {
+        "size": 352,
+        "sha256": "519ceb5587a6ad029ea57ae240ff622f80800232bb00a13400ee4d21f5b6175f"
+      },
+      "__TEXT,__swift_as_cont": {
+        "size": 620,
+        "sha256": "5d326ba170c71a30cc37033f939b85635f7be99d0da432f40a5dd2861efe8bc9"
+      },
+      "__TEXT,__swift5_entry": {
+        "size": 8,
+        "sha256": "9073709c41ee8979209e3f793a5d1f70a9d00d9f9ec99ffde60bd75000c88bd4"
+      },
+      "__TEXT,__unwind_info": {
+        "size": 9888,
+        "sha256": "dc0e3915dd0eb5765db23ed55da49507b2c60b16f8b6a81f589b23d6bf2919fd"
+      },
+      "__TEXT,__eh_frame": {
+        "size": 16812,
+        "sha256": "c7504c75de784ab2a80f4fe9400a2f47d8811f7111eba0942bb105c5630f062a"
+      },
+      "__TEXT,__oslogstring": {
+        "size": 245,
+        "sha256": "3a257613af2b52757226f421ec814bc4fb426c4ac9d5924b2b81a7c34660c192"
+      },
+      "__DATA_CONST,__const": {
+        "size": 26544,
+        "sha256": "2c5cc3643d40c8684a80c2ba6a5d87dc58160988755a350febb96a64207ed77a"
+      },
+      "__DATA_CONST,__objc_classlist": {
+        "size": 120,
+        "sha256": "4f54e6900591ced981f62495e029164f6c2f475f6253879341a3168e18fcae32"
+      },
+      "__DATA_CONST,__objc_protolist": {
+        "size": 112,
+        "sha256": "25a513cc3837cf62d5ddfab89b7a156f13aa43626466123b3923e67a95695a98"
+      },
+      "__DATA_CONST,__objc_imageinfo": {
+        "size": 8,
+        "sha256": "7408fcdda372aaed9b8d62d262bd8e7ad4da66abeb61efb31e7c98020b1321ce"
+      },
+      "__DATA_CONST,__objc_protorefs": {
+        "size": 56,
+        "sha256": "14723b27f488e38cc86b84058d5f1208c11655017be90571f3b3e516dc277daf"
+      },
+      "__DATA_CONST,__got": {
+        "size": 11232,
+        "sha256": "6f00dd8eabc5de50f6493c833297049a454727b5d091d3bdfa194d7f0147e964"
+      },
+      "__DATA,__objc_const": {
+        "size": 5664,
+        "sha256": "b0ea61f98b42902581852b504485e2049bbc65bd0f678967804080e01ede71b0"
+      },
+      "__DATA,__objc_selrefs": {
+        "size": 1952,
+        "sha256": "c44d8772df886d72aff225921b2827eab7212eda6936d0888c31bb698f2643f5"
+      },
+      "__DATA,__objc_data": {
+        "size": 2032,
+        "sha256": "486f26905a7242bf0e4a21cf1c5986f9c08f2eaf116fd4d2e79098e083653d11"
+      },
+      "__DATA,__data": {
+        "size": 18016,
+        "sha256": "033a4c962c65c4f3e2980f0ab58b21c378059d59e9fc1a960995cedc1ec51808"
+      },
+      "__DATA,__objc_stublist": {
+        "size": 8,
+        "sha256": "71d40530c3a456288ae0f218b2fb72242c412177c3409da29b6d4a02882cbc66"
+      }
+    },
+    "excluded": "__LINKEDIT signing/symbol data and nonmaterialized zero-fill sections"
+  },
+  "sourceMatchedResources": [
+    {
+      "name": "Bamboo.caf",
+      "sha256": "95de3cc1e63cefda6d75461e4cfec7a53d9bc71ea0c8db371e28fc2019b0ea76"
+    },
+    {
+      "name": "Bell.caf",
+      "sha256": "060d483df1604f5bbbe181176e45b8a056bef2b78382d845d70392953d0ba694"
+    },
+    {
+      "name": "Chime.caf",
+      "sha256": "25133da555bdbebf3eac0e26ff651e04529a11a6505008e17dcd3d2de600478d"
+    },
+    {
+      "name": "Chord.caf",
+      "sha256": "60de1ffcf17c3850c15a1779897859eae59667f738f0a50c5e22400973c24650"
+    },
+    {
+      "name": "Rebound.caf",
+      "sha256": "f228b279d55fe1097b06fc6544148f8a6ae80d8c0a7d2ec0eff7e046b8602381"
+    },
+    {
+      "name": "PrivacyInfo.xcprivacy",
+      "sha256": "3fe7471dabb2d5f675e17aac1ed417793996391564dda2ba5154cc27c41fd61f"
+    }
+  ],
+  "unchangedGeneratedPNGIcons": [
+    {
+      "name": "TallyIcon60x60@2x.png",
+      "matchesBuild23": true
+    },
+    {
+      "name": "TallyIcon76x76@2x~ipad.png",
+      "matchesBuild23": true
+    }
+  ],
+  "compiledIconLayers": [
+    {
+      "Name": "TallyIcon_Assets/Color-1",
+      "AssetType": "Color",
+      "Appearance": null,
+      "Idiom": "universal",
+      "Scale": 1,
+      "SHA1Digest": "6FC8CB76E0AB41D4152BBC617C2880EE16EBD76C31FB3AFE554872B462B04851"
+    },
+    {
+      "Name": "TallyIcon_Assets/Color-2",
+      "AssetType": "Color",
+      "Appearance": null,
+      "Idiom": "universal",
+      "Scale": 1,
+      "SHA1Digest": "CB2F19B5EC8D9B0B1782F65650F9AD2D5010E59647A9F6126642A7B042C4CD73"
+    },
+    {
+      "Name": "TallyIcon_Assets/Color-3",
+      "AssetType": "Color",
+      "Appearance": null,
+      "Idiom": "universal",
+      "Scale": 1,
+      "SHA1Digest": "3A592FCEA8921C968B4818EF9737F39F9A9A7058726F77AA98613E2D39754BD7"
+    },
+    {
+      "Name": "TallyIcon_Assets/Color-4",
+      "AssetType": "Color",
+      "Appearance": null,
+      "Idiom": "universal",
+      "Scale": 1,
+      "SHA1Digest": "8FE8A9236980D7643D8FDA867434D5E646D9ACA399353E0F46833E146DCA73EC"
+    },
+    {
+      "Name": "TallyIcon_Assets/Color-5",
+      "AssetType": "Color",
+      "Appearance": null,
+      "Idiom": "universal",
+      "Scale": 1,
+      "SHA1Digest": "C355FBA5A96B67CF1E7B229FA43E81FF7CF808965299E78DF33221588AEC261A"
+    },
+    {
+      "Name": "TallyIcon_Assets/system-dark",
+      "AssetType": "Named Gradient",
+      "Appearance": null,
+      "Idiom": "universal",
+      "Scale": 1,
+      "SHA1Digest": "0EF56854DEA8DEEF078F600A7C492E7D4ACAD606F3D09C038BEBD6AC7D83A7D0"
+    },
+    {
+      "Name": "TallyIcon_Assets/01-Incoming-Fold",
+      "AssetType": "Vector",
+      "Appearance": null,
+      "Idiom": "universal",
+      "Scale": 1,
+      "SHA1Digest": "897C1ABE045D1BB565429950131715EB98121EDA915A791F6961686668CEC1FF"
+    },
+    {
+      "Name": "TallyIcon_Assets/02-Outgoing-Fold",
+      "AssetType": "Vector",
+      "Appearance": null,
+      "Idiom": "universal",
+      "Scale": 1,
+      "SHA1Digest": "E14B4B40D8D2B62674519863E582E202DF4D8782EB7B3309273FF693DD2971F3"
+    }
+  ],
+  "temporaryVerificationAppRemoved": true,
+  "result": "Passed",
+  "checks": {
+    "frozenSourceManifestUnchanged": true,
+    "finalBrowserSourceMatchesReviewedPatch": true,
+    "originalSourceResourceBaselineUnchanged": true,
+    "archiveVersionAndBuild": true,
+    "archiveBundleIdentifier": true,
+    "archiveDeviceFamilies": true,
+    "exportVersionAndBuild": true,
+    "exportBundleIdentifier": true,
+    "exportDeviceFamilies": true,
+    "strictDistributionSignature": true,
+    "appleDistributionSigning": true,
+    "productionSignedEntitlements": true,
+    "appStoreDistributionProfile": true,
+    "profileIdentityMatches": true,
+    "profileUnexpired": true,
+    "debugFixturesAndMarkersExcluded": true,
+    "exportedCodeAndDataMatchFinalArchive": true,
+    "sourceResource-Bamboo.caf": true,
+    "sourceResource-Bell.caf": true,
+    "sourceResource-Chime.caf": true,
+    "sourceResource-Chord.caf": true,
+    "sourceResource-Rebound.caf": true,
+    "sourceResource-PrivacyInfo.xcprivacy": true,
+    "generatedIconFilesPresent": true,
+    "unchangedIcon-TallyIcon60x60@2x.png": true,
+    "unchangedIcon-TallyIcon76x76@2x~ipad.png": true,
+    "compiledIconLayerDigestsMatchBuild23": true,
+    "sourceStableThroughVerification": true
+  },
+  "completedAt": "2026-10-04T02:57:13.771134+00:00"
+}

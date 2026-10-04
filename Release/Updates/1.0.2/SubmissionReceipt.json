@@ -1,0 +1,72 @@
+{
+  "app": "Tally: Cash Flow",
+  "appStoreAppID": "6816792539",
+  "platform": "iOS and iPadOS",
+  "version": "1.0.2",
+  "build": "23",
+  "status": "Waiting for Review",
+  "whatsNew": "Bug fixes and improvements.",
+  "change": "Make the filename noninteractive on iPhone and iPad; move Rename and Share into the More menu. Remove the mobile title document-preview implementation.",
+  "submissionID": "4c0db5cf-9886-4eb1-9748-f1c34a45cb19",
+  "submittedAtLocal": "October 3, 2026, 11:05 AM America/New_York",
+  "statusVerifiedAt": "2026-10-03T15:06:43.950985+00:00",
+  "uploadCompletedAt": "2026-10-03T14:59:39Z",
+  "appStoreConnectURL": "https://appstoreconnect.apple.com/apps/6816792539/distribution/reviewsubmissions/details/4c0db5cf-9886-4eb1-9748-f1c34a45cb19",
+  "releaseMode": "Automatically release after approval; all users immediately",
+  "verification": {
+    "mobileResult": "Passed",
+    "mobileUniqueTests": 238,
+    "devices": [
+      {
+        "name": "iPad Air 13-inch (M4)",
+        "os": "27.0",
+        "passedCases": 376,
+        "failedCases": 0
+      },
+      {
+        "name": "iPhone 18 Pro Max",
+        "os": "27.0",
+        "passedCases": 376,
+        "failedCases": 0
+      }
+    ],
+    "uiChecks": [
+      "Filename is a static text element; tapping it opens no preview or menu",
+      "More contains Rename, Share, Settings, and Privacy & Support",
+      "Cancel preserves the existing name",
+      "Confirming the unchanged name closes the dialog without moving the file",
+      "The native document-browser API renames the fictional file with exactly one .tally extension",
+      "The renamed file retains its content and its filename remains noninteractive",
+      "The native Share sheet uses the renamed filename and offers Save to Files"
+    ],
+    "macResult": "Passed",
+    "macUniqueTests": 251,
+    "macFailures": 0,
+    "archiveBuild": "Succeeded",
+    "archiveSignatureVerification": "Passed codesign --verify --deep --strict",
+    "releaseBinary": "No MobileDocumentPreview or MobileDocumentTestSupport symbols found",
+    "physicalAppStoreVerification": "Pending approval and the user downloading the official update",
+    "archiveSigning": "Apple Development archive; exported App Store IPA verified separately with Apple Distribution signing and Production iCloud entitlements.",
+    "appIconResources": "Generated iPhone and iPad icon resources are byte-identical to the preceding build 22.",
+    "distributionSignatureVerification": "Passed codesign --verify --deep --strict; Apple Distribution signing",
+    "distributionEntitlements": "Production iCloud; get-task-allow=false; App Store profile",
+    "distributionBinaryIdentity": "All 37 materialized Mach-O code/data sections match the tested archive byte-for-byte."
+  },
+  "archive": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally iOS 1.0.2 (23).xcarchive",
+  "distributionEvidence": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally Build23 Distribution",
+  "submissionScreenshot": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally Build23 Distribution/Verification/AppStoreSubmission.png",
+  "gitOperations": false,
+  "macInterfaceAndIcon": "Unchanged",
+  "productScreenshots": "Unchanged",
+  "testData": "Isolated fictional fixtures only",
+  "sourceSHA256": {
+    "Sources/Storage/MobileDocumentBrowser.swift": "a7a38f179eb612c9b8ca3574f89348bd6de28e20e96ac2ba98be82a957745a3e",
+    "Sources/Storage/MobileDocumentTestSupport.swift": "7e078b329e7f528d915e0782c09af2e235ba4c25a2f27210f8c4304a097a74f6",
+    "Sources/Domain/TallyFileName.swift": "1bcc66c74c23eb95f12e087f993cf6d212b63aaf96e6d4c5f38765ac6819c289",
+    "Tests/Unit/TallyFileNameTests.swift": "765cd3cc8861d06992613661c7cbe23bc83eeb8ed5e878cd07ddc10fc6705b0e",
+    "Tests/UI/MobileFileActionsUITests.swift": "ee8dc05f26d241f0f207a2970ed02f9ea7ecc806a5179c1973ba2b619573dc4d",
+    "Tally.xcodeproj/project.pbxproj": "fe3f4bf2a5cd54ed598f4a2f821396ea3a904c7d6e4e01788c0baa3a81452a65",
+    "README.md": "7c752641c669513d2eb14967846f9a2b6a4373645deb929101ff07172563f924",
+    "Release/README.md": "98d2d0ea833850152ba69d5636281c808b1343d55637596552f284502288cde2"
+  }
+}

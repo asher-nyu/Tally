@@ -1,0 +1,619 @@
+{
+  "startedAt": "2026-10-03T15:13:08.756748+00:00",
+  "alpha": "/Applications/Tally.app",
+  "removedAppBundles": [
+    {
+      "path": "/Users/asherbloom/Applications/tally-cloud-verified-install-s5b9ggr6/Tally-previous.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/Users/asherbloom/Applications/tally-cloud-install-vs0aoqo_/Tally-previous.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/Users/asherbloom/Applications/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally Build23 Distribution/Verification/ExportedIPA/Payload/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/Xcode/DerivedData/Tally-govelvicmpzvmpcxyqdulzewrpwj/Build/Products/Debug/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyResetIconInspection/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallyResetIconInspection/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyIconRenderAudit.app",
+      "bundleID": "com.asherbloom.tally.icon-render-audit"
+    },
+    {
+      "path": "/private/tmp/Tally-before-final-settings-f44b1df5-696c-45d9-9656-693b3ca96077.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyRelease21-20260929-200843/Validation/iOS/Payload/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyRelease21-20260929-200843/Validation/Mac/com.asherbloom.Tally.pkg/Payload/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyBeforeSoundPalette20.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyFileActionsPatch/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallyFileActionsPatch/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewPatch/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewPatch/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/Tally-before-launch-settings21.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallySourceIconRenderAudit.app",
+      "bundleID": "com.asherbloom.tally.icon-render-audit"
+    },
+    {
+      "path": "/private/tmp/TallyIconRenderAudit2.app",
+      "bundleID": "com.asherbloom.tally.icon-render-audit"
+    },
+    {
+      "path": "/private/tmp/TallySoundPaletteLocalRelease20/Build/Products/Release/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewMacBuild/Build/Products/Release/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallySoundRenameMobile19/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallySoundRenameMobile19/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewBuild/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewBuild/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyLaunchMobile/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallyLaunchMobile/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallySoundRenameBuild19/Build/Products/Debug/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallySoundRenameBuild19/Build/Products/Debug/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyLaunchRelease21-Mac/Build/Products/Release/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/Tally-before-final-settings-6c2d9a17-3363-4ba4-a59c-4c7c95c19045.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyIconReferenceBuild/Tally.app",
+      "bundleID": "com.asherbloom.Tally.PreviewArtwork"
+    },
+    {
+      "path": "/private/tmp/TallyLaunchMac21/Build/Products/Debug/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallyLaunchMac21/Build/Products/Debug/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallySoundPaletteMobile20/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallySoundPaletteMobile20/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyBuild22Verification/Payload/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyLaunchRelease21-iOS/Build/Products/Release-iphoneos/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallySoundPaletteiPadReplay20/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallySoundPaletteiPadReplay20/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallySoundRenameLocalRelease19/Build/Products/Release/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewBaselineBuild/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewBaselineBuild/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyFileActionsMac/Build/Products/Debug/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallyFileActionsMac/Build/Products/Debug/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyProductCapture21/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallyProductCapture21/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallySoundPaletteMac20/Build/Products/Debug/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallySoundPaletteMac20/Build/Products/Debug/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyLaunchRelease21-Simulator/Build/Products/Release-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/private/tmp/TallyMobileLaunchUnits/Build/Products/Debug-iphonesimulator/TallyUITests-Runner.app",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner"
+    },
+    {
+      "path": "/private/tmp/TallyMobileLaunchUnits/Build/Products/Debug-iphonesimulator/Tally.app",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/Xcode/DerivedData/Tally-govelvicmpzvmpcxyqdulzewrpwj/Index.noindex/Build/Products/Debug/Tally.app",
+      "bundleID": "Incomplete Tally index product"
+    }
+  ],
+  "compressedArchives": [
+    {
+      "original": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-27/Tally Mac 1.0 (17).xcarchive",
+      "compressed": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-27/Tally Mac 1.0 (17).xcarchive.zip",
+      "sha256": "bde2f5ce861e0995f11928287df531173bddbbca994fed179eef4c6c457b9aa5",
+      "integrityVerification": "Passed"
+    },
+    {
+      "original": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-27/Tally Mac 1.0 (18).xcarchive",
+      "compressed": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-27/Tally Mac 1.0 (18).xcarchive.zip",
+      "sha256": "3e0c2b25563d637f0fd540f2bc82161f201255dfb8d994e28fc17312db0497d3",
+      "integrityVerification": "Passed"
+    },
+    {
+      "original": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-27/Tally iOS 1.0 (17).xcarchive",
+      "compressed": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-27/Tally iOS 1.0 (17).xcarchive.zip",
+      "sha256": "562f95d0399a9bb0b1c7c3953a4864dbb72ddb4721fbf444d305d4df9094204c",
+      "integrityVerification": "Passed"
+    },
+    {
+      "original": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-27/Tally iOS 1.0 (18).xcarchive",
+      "compressed": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-27/Tally iOS 1.0 (18).xcarchive.zip",
+      "sha256": "8047716e0ddf48d87ec74df11a7b5cfb29a3e850b4f99985325b574fb6cdb434",
+      "integrityVerification": "Passed"
+    },
+    {
+      "original": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-29/Tally Mac 1.0 (21).xcarchive",
+      "compressed": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-29/Tally Mac 1.0 (21).xcarchive.zip",
+      "sha256": "5530444bb44e97b6d6f60da7ba60c5c21d6586d73b5d4d9579ccb064aede68af",
+      "integrityVerification": "Passed"
+    },
+    {
+      "original": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-29/Tally iOS 1.0 (21).xcarchive",
+      "compressed": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-29/Tally iOS 1.0 (21).xcarchive.zip",
+      "sha256": "9b4059e3b81f5075492266a337548e1279d77b61518a1b8e3b1836fb02f33514",
+      "integrityVerification": "Passed"
+    },
+    {
+      "original": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-02/Tally iOS 1.0.1 (22).xcarchive",
+      "compressed": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-02/Tally iOS 1.0.1 (22).xcarchive.zip",
+      "sha256": "1a838e419d0e071f084df62b44454d8598c6848bb60500c35c7847dfba4d0bf9",
+      "integrityVerification": "Passed"
+    },
+    {
+      "original": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally iOS 1.0.2 (23).xcarchive",
+      "compressed": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally iOS 1.0.2 (23).xcarchive.zip",
+      "sha256": "5e69426886c07703ce78abae7e820327bf1c5807ec20b3c3a9aa3c6becc00f51",
+      "integrityVerification": "Passed"
+    }
+  ],
+  "simulatorUninstalls": [
+    {
+      "device": "iPhone 18 Pro Max",
+      "udid": "54FE7359-47BA-48DB-A7F6-A247D24403E5",
+      "bundleID": "com.asherbloom.Tally",
+      "previousState": "Booted"
+    },
+    {
+      "device": "iPhone 18 Pro Max",
+      "udid": "54FE7359-47BA-48DB-A7F6-A247D24403E5",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner",
+      "previousState": "Booted"
+    },
+    {
+      "device": "iPad Pro 11-inch (M5)",
+      "udid": "239613EF-CBA4-4955-A15E-661A21DEC327",
+      "bundleID": "com.asherbloom.Tally",
+      "previousState": "Shutdown"
+    },
+    {
+      "device": "iPad Pro 11-inch (M5)",
+      "udid": "239613EF-CBA4-4955-A15E-661A21DEC327",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner",
+      "previousState": "Shutdown"
+    },
+    {
+      "device": "iPad Air 13-inch (M4)",
+      "udid": "83A61359-3D0E-4AAE-B2F2-0272F98199E4",
+      "bundleID": "com.asherbloom.Tally",
+      "previousState": "Booted"
+    },
+    {
+      "device": "iPad Air 13-inch (M4)",
+      "udid": "83A61359-3D0E-4AAE-B2F2-0272F98199E4",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner",
+      "previousState": "Booted"
+    },
+    {
+      "device": "iPhone 17e",
+      "udid": "4A7174E2-D504-41D2-852C-B4998DB729DD",
+      "bundleID": "com.asherbloom.Tally",
+      "previousState": "Shutdown"
+    },
+    {
+      "device": "iPhone 17e",
+      "udid": "4A7174E2-D504-41D2-852C-B4998DB729DD",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner",
+      "previousState": "Shutdown"
+    },
+    {
+      "device": "iPad mini (A17 Pro)",
+      "udid": "84DD4049-565F-4450-A546-4A3DD758AB53",
+      "bundleID": "com.asherbloom.Tally",
+      "previousState": "Shutdown"
+    },
+    {
+      "device": "iPad mini (A17 Pro)",
+      "udid": "84DD4049-565F-4450-A546-4A3DD758AB53",
+      "bundleID": "com.asherbloom.TallyUITests.xctrunner",
+      "previousState": "Shutdown"
+    }
+  ],
+  "unregisteredPaths": [
+    {
+      "path": "/private/tmp/TallyReleaseDerived/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyLaunchMac21/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyLaunchMac21/Build/Products/Debug/TallyUITests-Runner.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyLaunchRelease21-Mac/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Applications/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyRelease21-20260929-200843/DerivedData-Mac/Build/Intermediates.noindex/ArchiveIntermediates/Tally/InstallationBuildProductsLocation/Applications/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-09-29/Tally iOS 1.0 (21).xcarchive/Products/Applications/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyDerived/Build/Products/Debug/TallyUITests-Runner.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyDerived/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyDerived/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyNativeTestDerived/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyNativeTestDerived/Build/Products/Debug/TallyUITests-Runner.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyRecoveryMacDerived/Build/Products/Debug/TallyUITests-Runner.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyRecoveryReleaseDerived/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyRecoveryMacDerived/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/CoreSimulator/Devices/54FE7359-47BA-48DB-A7F6-A247D24403E5/data/Containers/Bundle/Application/FA8311DD-8A12-4AF9-AFE6-ACABCEB5AEA6/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/CoreSimulator/Devices/54FE7359-47BA-48DB-A7F6-A247D24403E5/data/Containers/Bundle/Application/0E3AFE78-2040-40CB-BE1A-B44ED3AF09A0/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/CoreSimulator/Devices/54FE7359-47BA-48DB-A7F6-A247D24403E5/data/Containers/Bundle/Application/8A71FEC0-49A3-4898-B360-8506B6ED5E45/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/CoreSimulator/Devices/83A61359-3D0E-4AAE-B2F2-0272F98199E4/data/Containers/Bundle/Application/FBA8A418-8324-4B00-8F85-3B9F76E8AC2C/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyFinalMacDerived/Build/Products/Debug/TallyUITests-Runner.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyFinalMacDerived/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyFinalMacDerived/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyBuild13MacDerived/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyRestore14Derived/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyRestoreFinal14Derived/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyRestoreFinal14Derived/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/Xcode/DerivedData/Tally-govelvicmpzvmpcxyqdulzewrpwj/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/Tally15MacDerived/Build/Products/Debug/TallyUITests-Runner.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/Tally15ReleaseMac/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/Tally15MacDerived/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyRelease16UnitDerived/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyReleasePreparation/MacDerived/Build/Intermediates.noindex/ArchiveIntermediates/Tally/InstallationBuildProductsLocation/Applications/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyRelease18MacDerived/Build/Intermediates.noindex/ArchiveIntermediates/Tally/InstallationBuildProductsLocation/Applications/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyRelease18UnitDerived/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewMacBuild/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyIconReferenceBuild/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyIconRenderAudit.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyIconRenderAudit2.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallySourceIconRenderAudit.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyGeneratedIconWork/DocumentIcon-5CC41BEB-FB54-459F-BEF7-6CBE20AC85AC/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewBuild/Build/Intermediates.noindex/Tally.build/Debug-iphonesimulator/TallyThumbnail.build/DerivedSources/DocumentIconWork/DocumentIcon-6B79B7A7-3D2F-49C3-87E9-70F6430FDDFA/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewBuild/Build/Intermediates.noindex/Tally.build/Debug-iphonesimulator/Tally.build/DerivedSources/DocumentIconWork/DocumentIcon-EFD83383-0829-4A60-B060-603846A3A160/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewMacBuild/Build/Intermediates.noindex/Tally.build/Release/TallyThumbnail.build/DerivedSources/DocumentIconWork/DocumentIcon-98F79B96-83FC-47D0-820D-FC888152CD47/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewMacBuild/Build/Intermediates.noindex/Tally.build/Release/Tally.build/DerivedSources/DocumentIconWork/DocumentIcon-CC6D5352-8089-4C36-BC58-A301A40C9AEA/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-02/Tally iOS 1.0.1 (22).xcarchive/Products/Applications/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyFileActionsMac/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally iOS 1.0.2 (23).xcarchive/Products/Applications/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-03/Tally Build23 Distribution/Verification/ExportedIPA/Payload/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Applications/tally-cloud-verified-install-s5b9ggr6/Tally-previous.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/Users/asherbloom/Applications/tally-cloud-install-vs0aoqo_/Tally-previous.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallySoundRenameBuild19/Build/Products/Debug/TallyUITests-Runner.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallySoundRenameBuild19/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallySoundRenameLocalRelease19/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallySoundPaletteMac20/Build/Products/Debug/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallySoundPaletteMac20/Build/Products/Debug/TallyUITests-Runner.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallySoundPaletteLocalRelease20/Build/Products/Release/Tally.app",
+      "exitCode": 0
+    },
+    {
+      "path": "/private/tmp/TallyDocumentPreviewMacBuild/Build/Products/Release/Tally.app/Contents/PlugIns/TallyThumbnail.appex",
+      "exitCode": 1
+    }
+  ],
+  "gitOperations": false,
+  "alphaBefore": {
+    "version": "1.0",
+    "build": "21",
+    "receiptSHA256": "90f4c38fe7d555dd512469a02aaacac9c299eef544cb4ab655ed0016da7214e9",
+    "executableSHA256": "89e83d1bdbf8e07b069d0201396676cd740518e5a306b655951ebcc8ef458845",
+    "signature": "Apple Mac OS Application Signing"
+  },
+  "alphaAfter": {
+    "version": "1.0",
+    "build": "21",
+    "receiptSHA256": "90f4c38fe7d555dd512469a02aaacac9c299eef544cb4ab655ed0016da7214e9",
+    "executableSHA256": "89e83d1bdbf8e07b069d0201396676cd740518e5a306b655951ebcc8ef458845",
+    "signature": "Apple Mac OS Application Signing"
+  },
+  "completedAt": "2026-10-03T15:14:02.488277+00:00",
+  "status": "Verified: only the App Store Alpha remains",
+  "verifiedAt": "2026-10-03T15:15:36.677786+00:00",
+  "verification": {
+    "filesystem": {
+      "checkedAt": "2026-10-03T15:14:43.651403+00:00",
+      "roots": [
+        "/Applications",
+        "/Users/asherbloom/Applications",
+        "/Users/asherbloom/Downloads",
+        "/Users/asherbloom/Desktop",
+        "/Users/asherbloom/Documents",
+        "/Users/asherbloom/Library/Developer/Xcode",
+        "/Users/asherbloom/Library/Developer/CoreSimulator",
+        "/private/tmp"
+      ],
+      "apps": [
+        {
+          "path": "/Applications/Tally.app",
+          "bundleID": "com.asherbloom.Tally",
+          "appStoreReceipt": true
+        }
+      ]
+    },
+    "spotlightApplicationMatches": [
+      "/Applications/Tally.app"
+    ],
+    "macOSApplicationLookup": [
+      "/Applications/Tally.app"
+    ],
+    "alphaUnchanged": true,
+    "alphaStrictSignature": "Passed",
+    "simulatorBootStatesRestored": true,
+    "braveBrowser": "Quit; no process running",
+    "independentAudit": "Passed Launch Services, Spotlight, signature, and known-copy checks"
+  },
+  "standingWorkflow": "/Users/asherbloom/Downloads/Tally/AGENTS.md",
+  "preserved": [
+    "App Store Alpha and its data",
+    "Personal .tally and iCloud documents",
+    "Source code",
+    "Product screenshots",
+    "Release records, symbols, uploaded packages, and verified compressed Xcode archives"
+  ]
+}

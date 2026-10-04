@@ -1,0 +1,39 @@
+{
+  "app": "Tally: Cash Flow",
+  "appStoreAppID": "6816792539",
+  "platform": "iOS and iPadOS",
+  "version": "1.0.1",
+  "build": "22",
+  "status": "Waiting for Review",
+  "whatsNew": "Bug fixes and improvements.",
+  "change": "Supply the native Tally document icon explicitly in the mobile title menu while retaining native file metadata and file sharing.",
+  "verification": {
+    "unitTests": {
+      "passed": 230,
+      "devices": [
+        "iPhone 18 Pro Max simulator",
+        "iPad Air 13-inch (M4) simulator"
+      ]
+    },
+    "uiRegression": "Passed on both simulators; title menu file metadata and image, Share filename, and Save to Files activity checked.",
+    "visualInspection": "Correct folded-page document icon verified in title menu and Share sheet on both simulators.",
+    "distributionSignature": "Valid Apple Distribution signature, version 1.0.1 build 22, production iCloud, get-task-allow=false.",
+    "physicalDevice": "Pending verification of the approved App Store installation by the user."
+  },
+  "uploadCompletedAt": "2026-10-03T00:23:19Z",
+  "archive": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-02/Tally iOS 1.0.1 (22).xcarchive",
+  "distributionEvidence": "/Users/asherbloom/Library/Developer/Xcode/Archives/2026-10-02/Tally Build22 Distribution",
+  "gitOperations": false,
+  "sourceSHA256": {
+    "Sources/Storage/MobileDocumentBrowser.swift": "13d09a4279ecdb2d86e43da9407a599b83c7ca4e69ea0e05ceeadd546806b4c9",
+    "Sources/Storage/MobileDocumentPreview.swift": "71eb3a46c6673ac970a079d4697b26f7e71ae342600c669f64e9a84023442197",
+    "Tests/Unit/MobileDocumentPreviewTests.swift": "5ef012982d75a20f6565a232657edf923b6ab344f69bbb3b9b4276026b537112",
+    "Tests/UI/MobileDocumentPreviewUITests.swift": "98a19518930d781c7d00b75d76c1695e9b364c0266ad6bfaccf20d67b984221e",
+    "Tally.xcodeproj/project.pbxproj": "cd1687cd36cf139292e22080b4b89b79eda4a4b8f892ba65a1c3bbd7575a14fe"
+  },
+  "releaseMode": "Automatically release after approval; all users immediately",
+  "appStoreConnectURL": "https://appstoreconnect.apple.com/apps/6816792539/distribution/reviewsubmissions/details/9cd9ace3-eb42-4fcb-9b0e-408a9c7d8e32",
+  "statusVerifiedAt": "2026-10-03T00:26:51Z",
+  "submittedAtLocal": "October 2, 2026, 8:26 PM America/New_York",
+  "submissionID": "9cd9ace3-eb42-4fcb-9b0e-408a9c7d8e32"
+}

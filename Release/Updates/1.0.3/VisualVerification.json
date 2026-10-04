@@ -1,0 +1,115 @@
+{
+  "result": "Passed",
+  "verificationStage": "Final production accessibility follow-up",
+  "method": "Reviewed original variable-frame-rate video frames, including consecutive last-cover and first-editor frames. Decoded every encoded frame and checked all pre-editor body frames after 0.7 seconds for content changes; only the appropriate cover and spinner were present. Fixed 12 fps PNG exports were not used as the sole evidence.",
+  "frameNumbering": "Zero-based original encoded frames.",
+  "timestampDefinition": "best_effort_timestamp / stream time_base, relative to video start.",
+  "productionBrowserSource": {
+    "path": "/Users/asherbloom/Downloads/Tally/Sources/Storage/MobileDocumentBrowser.swift",
+    "sha256": "354986f3235198cede50c3489a682417c20f18a83a31aa8dc87122c609b11bb0",
+    "matchesFinalSourceManifest": true
+  },
+  "browserVisibleBeforeEditor": false,
+  "restoredEditorSlidesUp": false,
+  "adaptiveAppearanceCorrect": true,
+  "cases": [
+    {
+      "device": "iPhone 18 Pro Max",
+      "appearance": "dark",
+      "video": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3/iphone-dark-launch.mp4",
+      "videoSHA256": "3d9be81eec252fc938bae4a78457e0bbb88ae9e2c6c78c15c81c29e1f7ce07ab",
+      "resolution": {
+        "width": 1320,
+        "height": 2868
+      },
+      "encodedFrameCount": 117,
+      "timeBase": "1/600",
+      "lastCoverFrame": 112,
+      "lastCoverPTS": 1666,
+      "lastCoverTime": 2.776667,
+      "firstEditorFrame": 113,
+      "firstEditorPTS": 1680,
+      "firstEditorTime": 2.8,
+      "browserVisibleBeforeEditor": false,
+      "restoredEditorSlidesUp": false,
+      "adaptiveAppearanceCorrect": true,
+      "editor": "Launch-A; October 2026; net cash flow -$123.45; one Launch fixture A expense.",
+      "observedTransition": "Centered spinner on the appearance-appropriate cover changes directly to the complete, correctly positioned editor."
+    },
+    {
+      "device": "iPhone 18 Pro Max",
+      "appearance": "light",
+      "video": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3/iphone-light-launch.mp4",
+      "videoSHA256": "a377b49494b6143c6c251fe8eba7a746784c381729b6e5ab1e86e0734569bf04",
+      "resolution": {
+        "width": 1320,
+        "height": 2868
+      },
+      "encodedFrameCount": 122,
+      "timeBase": "1/600",
+      "lastCoverFrame": 117,
+      "lastCoverPTS": 1633,
+      "lastCoverTime": 2.721667,
+      "firstEditorFrame": 118,
+      "firstEditorPTS": 1647,
+      "firstEditorTime": 2.745,
+      "browserVisibleBeforeEditor": false,
+      "restoredEditorSlidesUp": false,
+      "adaptiveAppearanceCorrect": true,
+      "editor": "Launch-A; October 2026; net cash flow -$123.45; one Launch fixture A expense.",
+      "observedTransition": "Centered spinner on the appearance-appropriate cover changes directly to the complete, correctly positioned editor."
+    },
+    {
+      "device": "iPad Air 13-inch (M4)",
+      "appearance": "dark",
+      "video": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3/ipad-dark-launch.mp4",
+      "videoSHA256": "808fe54f60685cb26ec0c679316ddf0026468a30bad6d6865d934050e6fb4770",
+      "resolution": {
+        "width": 2048,
+        "height": 2732
+      },
+      "encodedFrameCount": 112,
+      "timeBase": "1/600",
+      "lastCoverFrame": 107,
+      "lastCoverPTS": 1692,
+      "lastCoverTime": 2.82,
+      "firstEditorFrame": 108,
+      "firstEditorPTS": 1719,
+      "firstEditorTime": 2.865,
+      "browserVisibleBeforeEditor": false,
+      "restoredEditorSlidesUp": false,
+      "adaptiveAppearanceCorrect": true,
+      "editor": "Launch-A; October 2026; net cash flow -$123.45; one Launch fixture A expense.",
+      "observedTransition": "Centered spinner on the appearance-appropriate cover changes directly to the complete, correctly positioned editor."
+    },
+    {
+      "device": "iPad Air 13-inch (M4)",
+      "appearance": "light",
+      "video": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3/ipad-light-launch.mp4",
+      "videoSHA256": "fe4e61b15db231a11fc213d319b072bd53a4f050ccef57128deb6ac1e2f55bd6",
+      "resolution": {
+        "width": 2048,
+        "height": 2732
+      },
+      "encodedFrameCount": 120,
+      "timeBase": "1/600",
+      "lastCoverFrame": 115,
+      "lastCoverPTS": 1661,
+      "lastCoverTime": 2.768333,
+      "firstEditorFrame": 116,
+      "firstEditorPTS": 1686,
+      "firstEditorTime": 2.81,
+      "browserVisibleBeforeEditor": false,
+      "restoredEditorSlidesUp": false,
+      "adaptiveAppearanceCorrect": true,
+      "editor": "Launch-A; October 2026; net cash flow -$123.45; one Launch fixture A expense.",
+      "observedTransition": "Centered spinner on the appearance-appropriate cover changes directly to the complete, correctly positioned editor."
+    }
+  ],
+  "testData": "Isolated fictional Launch-A fixture only.",
+  "scope": "Four recorded simulator cold launches: iPhone and iPad, each in dark and light appearance. This visual review does not independently verify VoiceOver interaction or physical App Store installations.",
+  "physicalAppStoreDeviceVerification": "Not verified by this review.",
+  "previousEvidence": "Earlier recordings and verification retained in BeforeAccessibilityVerification.",
+  "mediaModified": false,
+  "verifiedAtUTC": "2026-10-04T02:57:57.336972+00:00"
+}

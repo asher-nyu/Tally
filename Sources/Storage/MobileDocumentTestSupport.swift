@@ -6,12 +6,20 @@ import UIKit
 @MainActor
 final class MobileDocumentTestSupport {
     static var isEnabled: Bool { ProcessInfo.processInfo.arguments.contains("--ui-testing-native-mobile") }
+    static var isFileActionsEnabled: Bool { ProcessInfo.processInfo.arguments.contains("--ui-testing-mobile-file-actions") }
     let directory: URL
     let url: URL
     private let contents: Data
 
     init() throws {
-        directory = try TallyDocumentBrowserController.makeStagingDirectory(purpose: "NativeMobileTests")
+        if Self.isFileActionsEnabled {
+            let documents = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            directory = documents.appendingPathComponent("TallyNativeMobileTests", isDirectory: true)
+                .appendingPathComponent(UUID().uuidString, isDirectory: true)
+            try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        } else {
+            directory = try TallyDocumentBrowserController.makeStagingDirectory(purpose: "NativeMobileTests")
+        }
         url = directory.appendingPathComponent("Fictional Budget.tally")
         let ledger = Ledger(expenses: [Expense(merchant: "Fictional rent", amountMinor: 123_456, billingDay: 1)])
         contents = try LedgerCodec.encode(ledger)
@@ -19,6 +27,7 @@ final class MobileDocumentTestSupport {
     }
 
     func buttons() -> [UIBarButtonItem] {
+        if Self.isFileActionsEnabled { return [] }
         let deletion = UIBarButtonItem(title: "Delete", image: UIImage(systemName: "trash"), primaryAction: UIAction(title: "Delete Fixture") { [weak self] _ in self?.delete(thenRestore: false) })
         deletion.accessibilityIdentifier = "nativeMobileDelete"
         let restoration = UIBarButtonItem(title: "Restore", image: UIImage(systemName: "arrow.uturn.backward"), primaryAction: UIAction(title: "Restore Fixture") { [weak self] _ in self?.delete(thenRestore: true) })
@@ -59,5 +68,6 @@ final class MobileDocumentTestSupport {
     }
 
     func cleanup() { try? FileManager.default.removeItem(at: directory) }
+
 }
 #endif

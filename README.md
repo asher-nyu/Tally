@@ -15,7 +15,7 @@ Tally brings income, expenses, and their timing into one clear view on iPhone, i
 - **Provider websites.** Save a website with a payment and open it from the app or its reminder.
 - **Native controls.** Search, filter, and sort your finances with layouts adapted to each device, system light and dark appearance, and accessibility text sizing.
 - **A familiar start.** Open the last used file by default, or choose the file browser in Settings. On Mac, use Tally → Settings or press Command–Comma. On iPhone and iPad, open the … menu from the file browser or an open file. Each device keeps its own launch preference.
-- **Files you control.** Save, rename, move, and recover `.tally` files using native document workflows, with autosave and undo support.
+- **Files you control.** Save, rename, move, and recover `.tally` files using native document workflows, with autosave and undo support. On iPhone and iPad, rename or share an open file from the … menu.
 
 ## Build and run
 

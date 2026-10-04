@@ -1,0 +1,6 @@
+{
+  "Sources/Storage/MobileDocumentBrowser.swift": "354986f3235198cede50c3489a682417c20f18a83a31aa8dc87122c609b11bb0",
+  "Sources/Storage/MobileLaunchTestSupport.swift": "a4a03ff3c58d9366fcabdf751ae361cd55b5e300329fb714ab87a6e376ee6340",
+  "Tests/UI/MobileLaunchSettingsUITests.swift": "efe715db76476e87003df0bc398d2a476c56d1b2bfa72213f12a8a3b4d46c23d",
+  "Tally.xcodeproj/project.pbxproj": "e39e30abbbb38c621aa5681fc2a9c26d9011c9d1012cfeb470ca4f0c78caaade"
+}

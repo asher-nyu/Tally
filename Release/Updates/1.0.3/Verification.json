@@ -1,0 +1,32 @@
+{
+  "recordedAt": "2026-10-04T03:02:59.020544+00:00",
+  "version": "1.0.3",
+  "build": "24",
+  "devices": {
+    "iPhone": {
+      "launchUIRegressionsPassed": 8,
+      "fileActionsUIRegressionPassed": 1,
+      "unitTestsPassed": 237,
+      "unitSuitesPassed": 17,
+      "coverResult": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3/iPhoneCoverFinal.xcresult",
+      "remainingLaunchResult": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3/iPhoneRemainingFinal.xcresult",
+      "unitAndFileActionsLog": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3/iPhoneTests.log"
+    },
+    "iPad": {
+      "launchUIRegressionsPassed": 8,
+      "fileActionsUIRegressionPassed": 1,
+      "unitTestsPassed": 237,
+      "unitSuitesPassed": 17,
+      "coverResult": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3/iPadCoverFinal.xcresult",
+      "remainingLaunchResult": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3/iPadRemainingFinal.xcresult",
+      "unitAndFileActionsLog": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3/iPadTests.log"
+    }
+  },
+  "gitOperations": false,
+  "evidenceFolder": "/Users/asherbloom/Documents/Codex/Tally Launch Patch 1.0.3",
+  "frozenSourceVerifiedBeforeUpload": true,
+  "ipaSHA256": "bd9881ee169157e0cfe134ef4f5daf2737d608408ccfe5c8cf92ba216bd4ee65",
+  "distributionVerificationPassed": true,
+  "visualVerification": "/Users/asherbloom/Downloads/Tally/Release/Updates/1.0.3/VisualVerification.json",
+  "initialFailedRunsRetainedAsDiagnostics": true
+}

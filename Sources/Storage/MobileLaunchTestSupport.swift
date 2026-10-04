@@ -56,6 +56,9 @@ enum MobileLaunchTestSupport {
         case "", "reset": break
         case "seedA":
             try MobileLastUsedFileStore(defaults: MobileLaunchEnvironment.defaults).remember(a)
+        case "seedCorruptA":
+            try Data("Invalid fictional Tally document".utf8).write(to: a, options: .atomic)
+            try MobileLastUsedFileStore(defaults: MobileLaunchEnvironment.defaults).remember(a)
         case "deleteA":
             try manager.removeItem(at: a)
         case "renameA":
@@ -67,6 +70,23 @@ enum MobileLaunchTestSupport {
         }
         didPrepare = true
         status = "ready"
+    }
+
+    /// Makes the pending native launch screen observable without delaying any
+    /// ordinary Debug or production launch. Cancellation still ends the wait.
+    static func delayRestorationIfRequested() async {
+        await delayIfRequested("TALLY_MOBILE_LAUNCH_TEST_RESTORE_DELAY_MS")
+    }
+
+    static func delayEditorPresentationIfRequested() async {
+        await delayIfRequested("TALLY_MOBILE_LAUNCH_TEST_PRESENT_DELAY_MS")
+    }
+
+    private static func delayIfRequested(_ key: String) async {
+        guard isEnabled,
+              let value = ProcessInfo.processInfo.environment[key],
+              let milliseconds = Int(value), (1...10_000).contains(milliseconds) else { return }
+        try? await Task.sleep(for: .milliseconds(milliseconds))
     }
 
     static func buttons(open: @escaping @MainActor (URL) -> Void) -> [UIBarButtonItem] {

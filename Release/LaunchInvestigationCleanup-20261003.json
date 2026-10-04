@@ -1,0 +1,77 @@
+{
+  "investigation": "Last-used-file launch transition",
+  "sourceChanges": false,
+  "gitOperations": false,
+  "removedBetas": [
+    {
+      "platform": "iphone",
+      "udid": "54FE7359-47BA-48DB-A7F6-A247D24403E5",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "platform": "ipad",
+      "udid": "83A61359-3D0E-4AAE-B2F2-0272F98199E4",
+      "bundleID": "com.asherbloom.Tally"
+    },
+    {
+      "platform": "build product",
+      "path": "/private/tmp/TallyLaunchFlashRepro-iOS-20261003/Build/Products/Debug-iphonesimulator/Tally.app"
+    },
+    {
+      "platform": "build product",
+      "path": "/private/tmp/TallyLaunchFlashRepro-Mac-20261003/Build/Products/Debug/Tally.app"
+    },
+    {
+      "platform": "prior incomplete build artifact",
+      "path": "/private/tmp/TallyBeforeSoundRename19.app"
+    },
+    {
+      "platform": "empty prior Xcode index artifact",
+      "path": "/Users/asherbloom/Library/Developer/Xcode/DerivedData/Tally-govelvicmpzvmpcxyqdulzewrpwj/Index.noindex/Build/Products/Debug/TallyUITests-Runner.app"
+    }
+  ],
+  "fixtureCleanup": [
+    {
+      "platform": "iphone",
+      "session": "0A4257E6-06A1-4C02-8CF6-649A40DADC9D",
+      "cleanupLaunched": "com.asherbloom.Tally: 85422"
+    },
+    {
+      "platform": "ipad",
+      "session": "332903B1-8A61-4FFC-88AC-2FD57A0615C5",
+      "cleanupLaunched": "com.asherbloom.Tally: 85461"
+    },
+    {
+      "platform": "mac",
+      "session": "7AF5BB99-012B-4842-BEFE-4720B598630B",
+      "processExitCode": 0
+    }
+  ],
+  "alphaAfter": {
+    "version": "1.0",
+    "build": "21",
+    "receiptSHA256": "90f4c38fe7d555dd512469a02aaacac9c299eef544cb4ab655ed0016da7214e9",
+    "executableSHA256": "89e83d1bdbf8e07b069d0201396676cd740518e5a306b655951ebcc8ef458845"
+  },
+  "alphaUnchanged": true,
+  "alphaStrictSignature": "Passed",
+  "simulatorsBootState": "Both remain booted, matching initial state",
+  "isolatedMacFixtureAndPreferencesRemoved": true,
+  "completedAt": "2026-10-04T01:31:16.454911+00:00",
+  "verification": {
+    "filesystemAppMatches": [
+      "/Applications/Tally.app"
+    ],
+    "spotlightAppMatches": [
+      "/Applications/Tally.app"
+    ],
+    "macOSApplicationLookup": [
+      "/Applications/Tally.app"
+    ],
+    "simulatorInstallationsAbsent": true,
+    "filesystemAuditErrors": 0,
+    "independentAudit": "Passed",
+    "preservedSystemCachePlaceholder": "Apple-managed iPhone Mirroring placeholder with no executable; not an installed development app"
+  },
+  "evidenceFolder": "/Users/asherbloom/Documents/Codex/Tally Launch Investigation 2026-10-03"
+}

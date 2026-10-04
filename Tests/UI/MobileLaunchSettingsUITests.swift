@@ -13,6 +13,43 @@ final class MobileLaunchSettingsUITests: XCTestCase {
         activeSession = nil
     }
 
+    func testRestoredFileKeepsTheBrowserCoveredThroughOpeningAndPresentation() throws {
+        let session = UUID()
+        let app = XCUIApplication()
+        activeApp = app
+        activeSession = session
+        app.launchArguments = ["--ui-testing", "--ui-testing-mobile-launch-settings"]
+        app.launchEnvironment["TALLY_MOBILE_LAUNCH_TEST_SESSION"] = session.uuidString
+        app.launchEnvironment["TALLY_MOBILE_LAUNCH_TEST_ACTION"] = "seedA"
+        app.launchEnvironment["TALLY_MOBILE_LAUNCH_TEST_RESTORE_DELAY_MS"] = "8000"
+        app.launchEnvironment["TALLY_MOBILE_LAUNCH_TEST_PRESENT_DELAY_MS"] = "8000"
+        // Do not wait for browser/editor options: observe the native first
+        // screen while resolution and the opened document are still pending.
+        app.launch()
+        assertCoveredLaunchPhase("resolving", in: app)
+        attachScreenshot(app, named: "Launch cover while resolving the fictional last file")
+        assertCoveredLaunchPhase("presenting", in: app)
+        attachScreenshot(app, named: "Launch cover after opening the fictional last file")
+        assertDocument("A", in: app)
+        XCTAssertFalse(launchCover(in: app).exists)
+
+        // The launch cover must never reappear when returning to Files or
+        // choosing another file during the same session.
+        app.buttons["BackButton"].firstMatch.tap()
+        assertBrowser(in: app)
+        openFixture("B", in: app)
+        assertDocument("B", in: app)
+    }
+
+    func testUnreadableLastFileFallsBackToUsableBrowserWithoutAnError() throws {
+        let session = UUID()
+        let app = launch(session, action: "seedCorruptA")
+        assertBrowser(in: app)
+        XCTAssertFalse(app.alerts.element.exists)
+        openFixture("B", in: app)
+        assertDocument("B", in: app)
+    }
+
     func testSettingsFromBrowserAndEditorPersistAndLastFileReopens() throws {
         let session = UUID()
         let app = launch(session, action: "reset")
@@ -171,6 +208,8 @@ final class MobileLaunchSettingsUITests: XCTestCase {
 
     private func cleanUp(_ app: XCUIApplication, session: UUID) {
         app.terminate()
+        app.launchEnvironment.removeValue(forKey: "TALLY_MOBILE_LAUNCH_TEST_RESTORE_DELAY_MS")
+        app.launchEnvironment.removeValue(forKey: "TALLY_MOBILE_LAUNCH_TEST_PRESENT_DELAY_MS")
         app.launchEnvironment["TALLY_MOBILE_LAUNCH_TEST_SESSION"] = session.uuidString
         app.launchEnvironment["TALLY_MOBILE_LAUNCH_TEST_ACTION"] = "cleanup"
         app.launch()
@@ -180,6 +219,26 @@ final class MobileLaunchSettingsUITests: XCTestCase {
     private func assertBrowser(in app: XCUIApplication) {
         waitForOptions(in: app)
         XCTAssertFalse(app.buttons["addExpenseButton"].exists)
+        XCTAssertFalse(launchCover(in: app).exists)
+    }
+
+    private func launchCover(in app: XCUIApplication) -> XCUIElement {
+        app.descendants(matching: .any).matching(identifier: "tallyLaunchCover").firstMatch
+    }
+
+    private func assertCoveredLaunchPhase(_ phase: String, in app: XCUIApplication) {
+        let cover = launchCover(in: app)
+        let predicate = NSPredicate { _, _ in cover.exists && (cover.value as? String) == phase }
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: predicate, object: app)], timeout: 15), .completed)
+        XCTAssertTrue(cover.isHittable)
+        XCTAssertGreaterThanOrEqual(cover.frame.width, app.frame.width * 0.95)
+        XCTAssertGreaterThanOrEqual(cover.frame.height, app.frame.height * 0.95)
+        let namedOptions = app.buttons["Tally options"]
+        XCTAssertFalse(namedOptions.exists && namedOptions.isHittable)
+        let newFile = app.buttons["New Tally File"]
+        XCTAssertFalse(newFile.exists && newFile.isHittable)
+        let systemOptions = app.buttons.matching(NSPredicate(format: "label == %@", "More")).firstMatch
+        XCTAssertFalse(systemOptions.exists && systemOptions.isHittable, "The native browser must remain covered until the restored editor can be shown.")
     }
 
     private func openFixture(_ suffix: String, in app: XCUIApplication) {
@@ -197,24 +256,45 @@ final class MobileLaunchSettingsUITests: XCTestCase {
 
     private func openOptions(in app: XCUIApplication) {
         waitForOptions(in: app)
-        let more = optionsButton(in: app)!
+        guard let more = optionsButton(in: app) else {
+            XCTFail("Tally options must be available after the launch screen settles.")
+            return
+        }
         more.tap()
         XCTAssertTrue(app.buttons["Settings"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["Privacy & Support"].exists)
     }
 
     private func optionsButton(in app: XCUIApplication) -> XCUIElement? {
+        guard !launchCover(in: app).exists else { return nil }
+        let identified = app.buttons.matching(identifier: "tallyOptionsButton").firstMatch
+        if identified.exists && identified.isHittable { return identified }
         let named = app.buttons["Tally options"]
-        if named.exists { return named }
+        if named.exists && named.isHittable { return named }
         // UIDocumentBrowser's remote toolbar applies the system symbol label.
         // Tally's added global action is the leading More button; the browser's
-        // own view-options button remains on the trailing side.
-        return app.buttons.matching(NSPredicate(format: "label == %@", "More"))
+        // own view-options button remains on the trailing side. Resolve their
+        // positions only for a tap after the visible browser has settled.
+        guard !app.buttons["addExpenseButton"].exists else { return nil }
+        let systemOptions = app.buttons.matching(NSPredicate(format: "label == %@", "More"))
+        guard systemOptions.firstMatch.exists else { return nil }
+        return systemOptions
             .allElementsBoundByIndex.filter(\.isHittable).min { $0.frame.minX < $1.frame.minX }
     }
 
     private func waitForOptions(in app: XCUIApplication) {
-        let predicate = NSPredicate { [self] _, _ in optionsButton(in: app) != nil }
+        let predicate = NSPredicate { [self] _, _ in
+            guard !launchCover(in: app).exists else { return false }
+            let identified = app.buttons.matching(identifier: "tallyOptionsButton").firstMatch
+            if identified.exists && identified.isHittable { return true }
+            let named = app.buttons["Tally options"]
+            if named.exists && named.isHittable { return true }
+            guard !app.buttons["addExpenseButton"].exists else { return false }
+            // Do not enumerate native toolbar proxies during a cold launch:
+            // presentation can replace them between indexed snapshot reads.
+            let browserOptions = app.buttons.matching(NSPredicate(format: "label == %@", "More")).firstMatch
+            return browserOptions.exists && browserOptions.isHittable
+        }
         XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: predicate, object: app)], timeout: 15), .completed)
     }
 
