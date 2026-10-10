@@ -12,7 +12,7 @@ Maya works from home and a coworking studio. One monthly retainer gives her a st
 
 | Capture | App state | Real-life context |
 | --- | --- | --- |
-| `Tally-Mac-01.png` | September 2026, Month, All, sorted by Date. Whole desktop, with the centered default 860 × 680 pt Tally window showing totals and payments. | Maya checks a month that includes a project payment before deciding how much room she has. |
+| `Tally-Mac-01.png` | September 2026, Month, All, sorted by Date. Whole desktop, with the centered default 860 × 680 pt Tally window showing totals, income, and expenses. | Maya checks a month that includes a project payment before deciding how much room she has. |
 | `Tally-Mac-02.png` | 2026, Year, All, Amount: highest first. Keep the default 860 × 680 pt window centered, with the project payment, quarterly tax payment, and conference travel visible. | She reviews commitments that are easy to miss when looking only at one month. |
 | `Tally-Mac-03.png` | Open Quarterly tax payment and its Custom frequency editor, over the centered default 860 × 680 pt Tally window in the whole desktop capture. Do not resize the underlying window. | She sets a three-month repeat pattern for a recurring obligation. |
 

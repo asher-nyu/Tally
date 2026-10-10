@@ -603,13 +603,13 @@ struct ContentView: View {
     @ViewBuilder
     private var reminderStatus: some View {
         if notifications.authorizationStatus == .denied {
-            reminderNotice("Notifications are off for Tally. Enable them to receive payment reminders.") {
+            reminderNotice("Notifications are off for Tally. Enable them to get reminders for scheduled income and expenses.") {
                 Button("Open notification settings") {
                     Task { notificationSettingsError = !(await NotificationSettingsOpener.open()) }
                 }
             }
         } else if notifications.authorizationStatus == .notDetermined {
-            reminderNotice("Allow notifications to receive payment reminders on this device.") {
+            reminderNotice("Get reminders for scheduled income and expenses.") {
                 Button("Allow notifications") {
                     Task { _ = await notifications.requestPermission() }
                 }
@@ -657,7 +657,7 @@ struct ContentView: View {
         ContentUnavailableView {
             Label("Know what’s coming.", systemImage: "arrow.down.left.arrow.up.right")
         } description: {
-            Text("Keep income, expenses, and payment dates together.")
+            Text("Keep income, expenses, and their schedules together.")
         } actions: {
             Button("Add income or expense", systemImage: "plus") {
                 editor = ExpenseEditorContext(expense: nil)

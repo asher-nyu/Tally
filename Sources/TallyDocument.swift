@@ -29,7 +29,7 @@ final class TallyDocument: Document {
         }
         if let original {
             guard original.id == expense.id else {
-                mutationError = "This payment changed while you were editing. Close the editor and try again."
+                mutationError = "This item changed while you were editing. Close the editor and try again."
                 return
             }
             // The editor may have opened before an incoming file version arrived.
@@ -52,7 +52,7 @@ final class TallyDocument: Document {
 
     func deleteExpenses(ids: Set<UUID>, undoManager: UndoManager?) {
         let deleted = ledger.expenses.filter { ids.contains($0.id) }
-        let actionName = deleted.count == 1 ? "Delete \(deleted[0].kind.title)" : "Delete Payments"
+        let actionName = deleted.count == 1 ? "Delete \(deleted[0].kind.title)" : "Delete Selected Items"
         var updated = ledger
         updated.expenses.removeAll { ids.contains($0.id) }
         replaceLedger(updated, undoManager: undoManager, actionName: actionName)

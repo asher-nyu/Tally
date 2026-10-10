@@ -28,7 +28,7 @@ struct PrivacySupportView: View {
                     }
 
                     section("Notifications") {
-                        Text("Tally asks for permission when you save an enabled reminder. Notifications may show a payment’s name, amount, or other reminder details on the Lock Screen or in Notification Center. Your system notification settings and Focus settings control how these details appear.")
+                        Text("Tally asks for permission when you save an enabled reminder. Notifications may show names, amounts, or other reminder details on the Lock Screen or in Notification Center. Your system notification settings and Focus settings control how these details appear.")
                     }
 
                     section("Website links") {

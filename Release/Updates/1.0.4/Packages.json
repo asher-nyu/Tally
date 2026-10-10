@@ -1,0 +1,12 @@
+{
+  "iOS": {
+    "path": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/Distribution/iOSExport/Tally.ipa",
+    "bytes": 6680520,
+    "sha256": "d179c80b1b5ceac4513cb2e6aa973ebee0984c932a48d9ccdd13b8947bfa9883"
+  },
+  "macOS": {
+    "path": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/Distribution/MacExport/Tally.pkg",
+    "bytes": 3572559,
+    "sha256": "c971a7a48fe2704577eccf7db3d3f6fb8a4c43530484b8d0be16b82e1096d2e8"
+  }
+}

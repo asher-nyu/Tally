@@ -1,0 +1,39 @@
+[
+  {
+    "file": "index.html",
+    "url": "https://tally.asher-nyu.com/",
+    "httpStatus": 200,
+    "matchesLocal": true,
+    "onlyIntendedChange": true,
+    "sha256": "a1e34e6908527e5c6a9666d56c75a331b7d0cbac68fe6d8178a53e07adf61372"
+  },
+  {
+    "file": "privacy.html",
+    "url": "https://tally.asher-nyu.com/privacy",
+    "httpStatus": 200,
+    "matchesLocal": true,
+    "onlyIntendedChange": true,
+    "sha256": "5159430c4f958505b15d63855589a98a9e49e422fd2da2531b0b6f541762c966"
+  },
+  {
+    "file": "styles.css",
+    "url": "https://tally.asher-nyu.com/styles.css",
+    "httpStatus": 200,
+    "matchesLocal": true,
+    "onlyIntendedChange": true,
+    "sha256": "6e1604ace59ea94cac10c53e3d23a4a8d0f459c1b62dba9d26fd504d9e72c395"
+  },
+  {
+    "file": "copyright.js",
+    "url": "https://tally.asher-nyu.com/copyright.js",
+    "httpStatus": 200,
+    "matchesLocal": true,
+    "onlyIntendedChange": true,
+    "sha256": "cb862a081e7a93a4500b2698f4526bccd166c0e960bbbca09cce15c955ad1a86"
+  },
+  {
+    "legacyPrivacyRedirect": "https://tally.asher-nyu.com/privacy.html",
+    "location": "/privacy",
+    "httpStatus": 308
+  }
+]

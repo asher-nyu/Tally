@@ -1,0 +1,447 @@
+{
+  "appId": "6816792539",
+  "bundleIdentifier": "com.asherbloom.Tally",
+  "version": "1.0.4",
+  "build": "25",
+  "recordedAt": "2026-10-10T02:20:53.048262+00:00",
+  "requestedBanner": "Get reminders for scheduled income and expenses.",
+  "releaseNote": "Bug fixes and improvements.",
+  "macUnitTests": {
+    "count": 251,
+    "suites": 18,
+    "passed": true,
+    "result": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/MacUnitTests.xcresult"
+  },
+  "productionSourceReview": {
+    "reviewedAt": "2026-10-10T02:03:56.824650+00:00",
+    "status": "passed",
+    "scope": "Read-only original Swift code and frozen release Workspace review; only these review evidence files written. No UI interactions or Git access.",
+    "checks": {
+      "selectedPermissionBanner": {
+        "file": "Sources/ContentView.swift",
+        "passed": true,
+        "line": 612
+      },
+      "deniedBanner": {
+        "file": "Sources/ContentView.swift",
+        "passed": true,
+        "line": 606
+      },
+      "emptyState": {
+        "file": "Sources/ContentView.swift",
+        "passed": true,
+        "line": 660
+      },
+      "itemLimit": {
+        "file": "Sources/Domain/LedgerCodec.swift",
+        "passed": true,
+        "line": 15
+      },
+      "reminderDateError": {
+        "file": "Sources/Domain/LedgerCodec.swift",
+        "passed": true,
+        "line": 23
+      },
+      "privacyNotifications": {
+        "file": "Sources/Views/PrivacySupportView.swift",
+        "passed": true,
+        "line": 31
+      },
+      "staleEditor": {
+        "file": "Sources/TallyDocument.swift",
+        "passed": true,
+        "line": 32
+      },
+      "bulkUndo": {
+        "file": "Sources/TallyDocument.swift",
+        "passed": true,
+        "line": 55
+      },
+      "expenseReminderSubjectPreserved": {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "passed": true,
+        "line": 324
+      },
+      "expenseReminderTimingPreserved": {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "passed": true,
+        "line": 325
+      },
+      "expenseScheduleAbsencePreserved": {
+        "file": "Sources/Views/ExpenseScheduleDescription.swift",
+        "passed": true,
+        "line": 32
+      },
+      "expenseOccurrenceCountPreserved": {
+        "file": "Sources/Views/ExpenseScheduleDescription.swift",
+        "passed": true,
+        "line": 22
+      },
+      "internalNotificationPrefixPreserved": {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "passed": true,
+        "line": 84
+      },
+      "internalNotificationActionPreserved": {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "passed": true,
+        "line": 85
+      },
+      "internalNotificationCategoryPreserved": {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "passed": true,
+        "line": 86
+      },
+      "internalReminderCacheKeyPreserved": {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "passed": true,
+        "line": 377
+      },
+      "serializedReminderTypePreserved": {
+        "file": "Sources/Domain/PaymentReminder.swift",
+        "passed": true,
+        "line": 57
+      }
+    },
+    "remainingPaymentStringMatches": [
+      {
+        "file": "Sources/Domain/PaymentReminder.swift",
+        "line": 306,
+        "text": "\"tally.payment.\\(ledgerID.uuidString).\\(expenseID.uuidString).\\(suffix)\""
+      },
+      {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "line": 84,
+        "text": "nonisolated static let requestPrefix = \"tally.payment.\""
+      },
+      {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "line": 85,
+        "text": "nonisolated static let websiteAction = \"tally.payment.openWebsite\""
+      },
+      {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "line": 86,
+        "text": "nonisolated static let websiteCategory = \"tally.payment.withWebsite\""
+      },
+      {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "line": 324,
+        "text": "let subject = expense.kind == .income ? \"Income\" : \"Payment\""
+      },
+      {
+        "file": "Sources/Services/NotificationCoordinator.swift",
+        "line": 377,
+        "text": "let cacheKey = \"Tally.paymentReminderSnapshots.v1\""
+      },
+      {
+        "file": "Sources/Views/ExpenseScheduleDescription.swift",
+        "line": 22,
+        "text": "occurrenceCount = \"\\(count) \\(count == 1 ? \"payment\" : \"payments\") this \\(period.kind.unit)\""
+      },
+      {
+        "file": "Sources/Views/ExpenseScheduleDescription.swift",
+        "line": 39,
+        "text": "return \"\\(position) \\(kind == .income ? \"income\" : \"payment\")\""
+      }
+    ],
+    "sourceHashesMatch": true,
+    "macUnitTestEvidence": {
+      "count": 251,
+      "suites": 18,
+      "passed": true,
+      "log": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/MacUnitTests.log"
+    },
+    "distributionVersions": {
+      "iOS": {
+        "version": "1.0.4",
+        "build": "25",
+        "strictSignature": true,
+        "productionICloud": true
+      },
+      "Mac": {
+        "version": "1.0.4",
+        "build": "25",
+        "strictSignature": true,
+        "productionICloud": true
+      }
+    },
+    "uploadReceipts": {
+      "iOS": {
+        "version": "1.0.4",
+        "build": "25",
+        "uploadSucceeded": true
+      },
+      "macOS": {
+        "version": "1.0.4",
+        "build": "25",
+        "uploadSucceeded": true
+      }
+    },
+    "issues": [],
+    "testAssessment": "Static copy replacements do not alter scheduling, persistence, or control flow. Existing income/expense distinctions and serialization identifiers remain intact. No copy-mirroring unit tests added."
+  },
+  "distribution": {
+    "iOS": {
+      "app": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/Distribution/Verification/iOS/Payload/Tally.app",
+      "version": "1.0.4",
+      "build": "25",
+      "bundle": "com.asherbloom.Tally",
+      "strictSignature": true,
+      "signingAuthorities": [
+        "Apple Distribution: Asher  Bloom (Q5VAMXPYZN)",
+        "Apple Worldwide Developer Relations Certification Authority",
+        "Apple Root CA"
+      ],
+      "getTaskAllow": false,
+      "iCloudEnvironment": "Production",
+      "containers": [
+        "iCloud.com.asherbloom.Tally"
+      ],
+      "soundFiles": [
+        "Bamboo.caf",
+        "Bell.caf",
+        "Chime.caf",
+        "Chord.caf",
+        "Rebound.caf"
+      ],
+      "privacyManifest": true,
+      "assetCatalog": true,
+      "iconKeys": {
+        "CFBundleIcons": {
+          "CFBundlePrimaryIcon": {
+            "CFBundleIconFiles": [
+              "TallyIcon60x60"
+            ],
+            "CFBundleIconName": "TallyIcon"
+          }
+        },
+        "CFBundleIcons~ipad": {
+          "CFBundlePrimaryIcon": {
+            "CFBundleIconFiles": [
+              "TallyIcon60x60",
+              "TallyIcon76x76"
+            ],
+            "CFBundleIconName": "TallyIcon"
+          }
+        }
+      },
+      "deviceFamilies": [
+        1,
+        2
+      ]
+    },
+    "Mac": {
+      "app": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/Distribution/Verification/Mac/com.asherbloom.Tally.pkg/Payload/Tally.app",
+      "version": "1.0.4",
+      "build": "25",
+      "bundle": "com.asherbloom.Tally",
+      "strictSignature": true,
+      "signingAuthorities": [
+        "Apple Distribution: Asher  Bloom (Q5VAMXPYZN)",
+        "Apple Worldwide Developer Relations Certification Authority",
+        "Apple Root CA"
+      ],
+      "getTaskAllow": false,
+      "iCloudEnvironment": "Production",
+      "containers": [
+        "iCloud.com.asherbloom.Tally"
+      ],
+      "soundFiles": [
+        "Bamboo.caf",
+        "Bell.caf",
+        "Chime.caf",
+        "Chord.caf",
+        "Rebound.caf"
+      ],
+      "privacyManifest": true,
+      "assetCatalog": true,
+      "iconKeys": {
+        "CFBundleIconFile": "TallyIcon",
+        "CFBundleIconName": "TallyIcon"
+      },
+      "deviceFamilies": null
+    }
+  },
+  "uploads": {
+    "iOS": {
+      "version": "1.0.4",
+      "build": "25",
+      "uploadSucceeded": true,
+      "receiptLine": "2026-10-09 21:59:33.002 xcodebuild[31870:2596245] Progress 100%: Upload succeeded.",
+      "log": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/Distribution/iOSUpload.log",
+      "archive": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/Distribution/Tally-iOS-1.0.4-25.xcarchive",
+      "archiveMetadataKeys": [
+        "ApplicationProperties",
+        "ArchiveVersion",
+        "CreationDate",
+        "Distributions",
+        "Name",
+        "SchemeName"
+      ]
+    },
+    "macOS": {
+      "version": "1.0.4",
+      "build": "25",
+      "uploadSucceeded": true,
+      "receiptLine": "2026-10-09 21:59:33.203 xcodebuild[31871:2596244] Progress 100%: Upload succeeded.",
+      "log": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/Distribution/MacUpload.log",
+      "archive": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/Distribution/Tally-macOS-1.0.4-25.xcarchive",
+      "archiveMetadataKeys": [
+        "ApplicationProperties",
+        "ArchiveVersion",
+        "CreationDate",
+        "Distributions",
+        "Name",
+        "SchemeName"
+      ]
+    }
+  },
+  "packages": {
+    "iOS": {
+      "path": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/Distribution/iOSExport/Tally.ipa",
+      "bytes": 6680520,
+      "sha256": "d179c80b1b5ceac4513cb2e6aa973ebee0984c932a48d9ccdd13b8947bfa9883"
+    },
+    "macOS": {
+      "path": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/Distribution/MacExport/Tally.pkg",
+      "bytes": 3572559,
+      "sha256": "c971a7a48fe2704577eccf7db3d3f6fb8a4c43530484b8d0be16b82e1096d2e8"
+    }
+  },
+  "storeFields": {
+    "iOS": {
+      "descriptionMatches": true,
+      "whatsNew": "Bug fixes and improvements.",
+      "version": "1.0.4",
+      "copyright": "Copyright \u00a9 2026 Asher Bloom. All rights reserved.",
+      "url": "https://appstoreconnect.apple.com/apps/6816792539/distribution/ios/version/inflight"
+    },
+    "macOS": {
+      "descriptionMatches": true,
+      "whatsNew": "Bug fixes and improvements.",
+      "version": "1.0.4",
+      "url": "https://appstoreconnect.apple.com/apps/6816792539/distribution/macos/version/inflight"
+    }
+  },
+  "gitOperations": false,
+  "productScreenshotsChanged": false,
+  "visualVerification": {
+    "scope": "Notification wording and related editor/privacy UI; isolated fictional in-memory fixtures only",
+    "workspace": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/VerificationWorkspace",
+    "productionSourceChangedByThisAgent": false,
+    "gitTouched": false,
+    "cases": {
+      "iPhone18ProMax": [
+        {
+          "case": "testDisabledNotificationsBannerUsesInclusiveCopy",
+          "durationSeconds": 14.131
+        },
+        {
+          "case": "testIncomeAndExpensesProduceBalanceAndExcludeVariableAmounts",
+          "durationSeconds": 96.62
+        },
+        {
+          "case": "testPrivacyNotificationCopyIncludesIncomeAndExpenses",
+          "durationSeconds": 10.006
+        },
+        {
+          "case": "testReminderPermissionBannerUsesInclusiveCopy",
+          "durationSeconds": 10.252
+        },
+        {
+          "case": "testReminderPermissionBannerUsesInclusiveCopyAtLargestTextSize",
+          "durationSeconds": 8.661
+        },
+        {
+          "case": "testReminderRequiresDatePersistsAndCancelsDraftChanges",
+          "durationSeconds": 153.684
+        }
+      ],
+      "iPadAir13M4": [
+        {
+          "case": "testDisabledNotificationsBannerUsesInclusiveCopy",
+          "durationSeconds": 7.762
+        },
+        {
+          "case": "testIncomeAndExpensesProduceBalanceAndExcludeVariableAmounts",
+          "durationSeconds": 98.706
+        },
+        {
+          "case": "testPrivacyNotificationCopyIncludesIncomeAndExpenses",
+          "durationSeconds": 7.781
+        },
+        {
+          "case": "testReminderPermissionBannerUsesInclusiveCopy",
+          "durationSeconds": 7.301
+        },
+        {
+          "case": "testReminderPermissionBannerUsesInclusiveCopyAtLargestTextSize",
+          "durationSeconds": 6.956
+        },
+        {
+          "case": "testReminderRequiresDatePersistsAndCancelsDraftChanges",
+          "durationSeconds": 171.405
+        }
+      ],
+      "Mac": [
+        {
+          "case": "testDisabledNotificationsBannerUsesInclusiveCopy",
+          "durationSeconds": 9.621
+        },
+        {
+          "case": "testIncomeAndExpensesProduceBalanceAndExcludeVariableAmounts",
+          "durationSeconds": 90.284
+        },
+        {
+          "case": "testPrivacyNotificationCopyIncludesIncomeAndExpenses",
+          "durationSeconds": 9.482
+        },
+        {
+          "case": "testReminderPermissionBannerUsesInclusiveCopy",
+          "durationSeconds": 9.314
+        },
+        {
+          "case": "testReminderPermissionBannerUsesInclusiveCopyAtLargestTextSize",
+          "durationSeconds": 9.169
+        },
+        {
+          "case": "testReminderRequiresDatePersistsAndCancelsDraftChanges",
+          "durationSeconds": 84.261
+        }
+      ]
+    },
+    "phoneCommandResult": "TEST SUCCEEDED",
+    "macCommandResult": "TEST SUCCEEDED",
+    "ipadCommandResult": "All six test cases and suite completed with zero failures; Xcode host hung in finalization. Idle finalizer terminated after preserving log. Result bundle did not finalize; independent simulator captures retained.",
+    "priorAndRestoredSimulatorStates": {
+      "54FE7359-47BA-48DB-A7F6-A247D24403E5": "Shutdown",
+      "83A61359-3D0E-4AAE-B2F2-0272F98199E4": "Shutdown"
+    },
+    "foregroundRestored": "Safari",
+    "notes": [
+      "Verification-only hooks inject notDetermined/denied while scheduling and notifications remain inert. No reminders are persisted.",
+      "Mac tests required user-completed XCTest UI Automation authentication, and verification-only AX label/value/window handling.",
+      "Initial iPad Variable segment test tap was hardened in verification harness by dismissing keyboard and revealing the control. Production source unchanged.",
+      "Phone xcresult has two nonfatal invalid frame dimension runtime warnings in existing editor UI checks.",
+      "Mac xcresult includes one nonfatal internal XCTest/AppKit quality-of-service warning.",
+      "Mac app.screenshot attachments are full-desktop QA evidence and include the surrounding Codex window; keep these private, do not use as public product images. The foreground Tally data is entirely fictional."
+    ],
+    "screenshots": {
+      "phone": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/PhoneSnapshots",
+      "ipad": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/PadSnapshots",
+      "macPrivateQA": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/MacSnapshots"
+    },
+    "visualInspection": "Exact banner and disabled copy fully visible; button text intact and unobstructed at standard and largest-text layout on all three platform types. Privacy notifications paragraph uses reminder details.",
+    "betaProductsAwaitingCleanup": [
+      "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/VerificationPhoneDerived",
+      "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/VerificationPadDerived",
+      "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/VerificationMacDerived",
+      "/private/tmp/TallyReminderVerification-20261009"
+    ]
+  },
+  "reviewSubmissionConfirmed": true,
+  "websiteVerification": "/Users/asherbloom/Downloads/Tally/Release/Updates/1.0.4/WebsiteVerification.json",
+  "betaCleanupComplete": true,
+  "cleanupVerification": "/Users/asherbloom/Downloads/Tally/Release/Updates/1.0.4/InstallationCleanupVerification.json"
+}

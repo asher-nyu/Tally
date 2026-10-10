@@ -1,0 +1,48 @@
+{
+  "appId": "6816792539",
+  "bundleIdentifier": "com.asherbloom.Tally",
+  "version": "1.0.4",
+  "build": "25",
+  "whatsNew": "Bug fixes and improvements.",
+  "platforms": {
+    "iOS": {
+      "appId": "6816792539",
+      "bundleIdentifier": "com.asherbloom.Tally",
+      "version": "1.0.4",
+      "build": "25",
+      "whatsNew": "Bug fixes and improvements.",
+      "status": "Waiting for Review",
+      "platform": "iOS and iPadOS",
+      "submissionId": "6f435a19-878e-4076-80f0-a8ae2345e5bc",
+      "appStoreConnectURL": "https://appstoreconnect.apple.com/apps/6816792539/distribution/reviewsubmissions/details/6f435a19-878e-4076-80f0-a8ae2345e5bc",
+      "verifiedAt": "2026-10-10T02:20:18.574700+00:00",
+      "reviewSubmissionConfirmed": true,
+      "uploadSucceeded": true,
+      "automaticReleaseAfterApproval": true,
+      "gitOperations": false
+    },
+    "macOS": {
+      "appId": "6816792539",
+      "bundleIdentifier": "com.asherbloom.Tally",
+      "version": "1.0.4",
+      "build": "25",
+      "whatsNew": "Bug fixes and improvements.",
+      "status": "Waiting for Review",
+      "platform": "macOS",
+      "submissionId": "82cbc907-653f-4224-9fe8-bfacf6a2b318",
+      "appStoreConnectURL": "https://appstoreconnect.apple.com/apps/6816792539/distribution/reviewsubmissions/details/82cbc907-653f-4224-9fe8-bfacf6a2b318",
+      "verifiedAt": "2026-10-10T02:19:39.626365+00:00",
+      "reviewSubmissionConfirmed": true,
+      "uploadSucceeded": true,
+      "automaticReleaseAfterApproval": true,
+      "gitOperations": false
+    }
+  },
+  "gitOperations": false,
+  "betaCleanupComplete": true,
+  "verification": "/Users/asherbloom/Downloads/Tally/Release/Updates/1.0.4/Verification.json",
+  "evidenceFolder": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009",
+  "betaCleanupVerifiedAt": "2026-10-10T02:25:33.549458+00:00",
+  "cleanupVerification": "/Users/asherbloom/Downloads/Tally/Release/Updates/1.0.4/InstallationCleanupVerification.json",
+  "finalStoreStatusVerifiedAt": "2026-10-10T02:25:42.403668+00:00"
+}

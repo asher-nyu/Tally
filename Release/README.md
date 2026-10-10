@@ -10,7 +10,7 @@ The App Store copy and public support pages in this folder describe Tally’s im
 | --- | --- | ---: |
 | Name | Tally: Cash Flow | 16 / 30 characters |
 | Subtitle | Income, expenses & reminders | 28 / 30 characters |
-| Description | Full text in the JSON file | 1,460 / 4,000 characters |
+| Description | Full text in the JSON file | 1,449 / 4,000 characters |
 | Keywords | Search terms in the JSON file | 85 / 100 bytes |
 
 The support URL is [tally.asher-nyu.com](https://tally.asher-nyu.com/) and the privacy URL is [tally.asher-nyu.com/privacy](https://tally.asher-nyu.com/privacy). The legacy `/privacy.html` address redirects to `/privacy`; both addresses open the same policy. The review phone number is entered privately in App Store Connect and is intentionally omitted from these project files. No review credentials are required by the app. App Store availability, age-rating answers, and submission status are managed separately.
@@ -42,6 +42,38 @@ Vercel hosts the static site at `tally.asher-nyu.com`. [website/vercel.json](web
 - Compared the public privacy text with the in-app Privacy & Support screen; their substantive disclosures agree.
 
 These checks cover the public pages. They do not assert physical-device iCloud validation, a complete accessibility audit, or App Review approval.
+
+## iPhone, iPad, and Mac update 1.0.4
+
+Version **1.0.4 (25)** uses “Get reminders for scheduled income and expenses.”
+in the notification permission banner. Related permission, privacy, empty-state,
+validation, editor, and undo wording consistently covers income and expenses.
+The App Store descriptions and public privacy page use the same distinction.
+Expense-specific payment wording remains appropriate to expenses.
+
+Both the iOS/iPadOS and macOS versions were submitted on October 9, 2026 and
+showed **Waiting for Review**, with automatic release after approval. The
+What’s New wording is unchanged: “Bug fixes and improvements.”
+[SubmissionReceipt.json](Updates/1.0.4/SubmissionReceipt.json) records both
+submissions and their App Store Connect links.
+
+All **251 Mac unit tests across 18 suites** passed. Six focused interface cases
+passed on each of Mac, iPhone 18 Pro Max, and iPad Air 13-inch, covering the new
+copy at standard and largest text sizes, privacy, income and expense totals,
+and reminder validation, persistence, cancellation, and disabling.
+Xcode did not finalize the iPad result bundle after its complete six-case suite
+passed; the full pass log and separate visual captures are retained.
+[Verification.json](Updates/1.0.4/Verification.json) records the checks,
+production source review, package signatures, iCloud entitlements, and uploads.
+[VisualVerificationReport.json](Updates/1.0.4/VisualVerificationReport.json)
+records the interface results and private fictional QA captures. The nine
+product screenshots are unchanged.
+
+Development and test installations were removed after submission. The App Store
+installation remains intact, and release packages, compressed archives, symbols,
+and verification evidence are retained.
+[InstallationCleanupVerification.json](Updates/1.0.4/InstallationCleanupVerification.json)
+records the final application lookup and receipt/signature checks.
 
 ## iPhone and iPad update 1.0.2
 

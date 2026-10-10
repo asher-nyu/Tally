@@ -1,0 +1,169 @@
+{
+  "reviewedAt": "2026-10-10T02:03:56.824650+00:00",
+  "status": "passed",
+  "scope": "Read-only original Swift code and frozen release Workspace review; only these review evidence files written. No UI interactions or Git access.",
+  "checks": {
+    "selectedPermissionBanner": {
+      "file": "Sources/ContentView.swift",
+      "passed": true,
+      "line": 612
+    },
+    "deniedBanner": {
+      "file": "Sources/ContentView.swift",
+      "passed": true,
+      "line": 606
+    },
+    "emptyState": {
+      "file": "Sources/ContentView.swift",
+      "passed": true,
+      "line": 660
+    },
+    "itemLimit": {
+      "file": "Sources/Domain/LedgerCodec.swift",
+      "passed": true,
+      "line": 15
+    },
+    "reminderDateError": {
+      "file": "Sources/Domain/LedgerCodec.swift",
+      "passed": true,
+      "line": 23
+    },
+    "privacyNotifications": {
+      "file": "Sources/Views/PrivacySupportView.swift",
+      "passed": true,
+      "line": 31
+    },
+    "staleEditor": {
+      "file": "Sources/TallyDocument.swift",
+      "passed": true,
+      "line": 32
+    },
+    "bulkUndo": {
+      "file": "Sources/TallyDocument.swift",
+      "passed": true,
+      "line": 55
+    },
+    "expenseReminderSubjectPreserved": {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "passed": true,
+      "line": 324
+    },
+    "expenseReminderTimingPreserved": {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "passed": true,
+      "line": 325
+    },
+    "expenseScheduleAbsencePreserved": {
+      "file": "Sources/Views/ExpenseScheduleDescription.swift",
+      "passed": true,
+      "line": 32
+    },
+    "expenseOccurrenceCountPreserved": {
+      "file": "Sources/Views/ExpenseScheduleDescription.swift",
+      "passed": true,
+      "line": 22
+    },
+    "internalNotificationPrefixPreserved": {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "passed": true,
+      "line": 84
+    },
+    "internalNotificationActionPreserved": {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "passed": true,
+      "line": 85
+    },
+    "internalNotificationCategoryPreserved": {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "passed": true,
+      "line": 86
+    },
+    "internalReminderCacheKeyPreserved": {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "passed": true,
+      "line": 377
+    },
+    "serializedReminderTypePreserved": {
+      "file": "Sources/Domain/PaymentReminder.swift",
+      "passed": true,
+      "line": 57
+    }
+  },
+  "remainingPaymentStringMatches": [
+    {
+      "file": "Sources/Domain/PaymentReminder.swift",
+      "line": 306,
+      "text": "\"tally.payment.\\(ledgerID.uuidString).\\(expenseID.uuidString).\\(suffix)\""
+    },
+    {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "line": 84,
+      "text": "nonisolated static let requestPrefix = \"tally.payment.\""
+    },
+    {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "line": 85,
+      "text": "nonisolated static let websiteAction = \"tally.payment.openWebsite\""
+    },
+    {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "line": 86,
+      "text": "nonisolated static let websiteCategory = \"tally.payment.withWebsite\""
+    },
+    {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "line": 324,
+      "text": "let subject = expense.kind == .income ? \"Income\" : \"Payment\""
+    },
+    {
+      "file": "Sources/Services/NotificationCoordinator.swift",
+      "line": 377,
+      "text": "let cacheKey = \"Tally.paymentReminderSnapshots.v1\""
+    },
+    {
+      "file": "Sources/Views/ExpenseScheduleDescription.swift",
+      "line": 22,
+      "text": "occurrenceCount = \"\\(count) \\(count == 1 ? \"payment\" : \"payments\") this \\(period.kind.unit)\""
+    },
+    {
+      "file": "Sources/Views/ExpenseScheduleDescription.swift",
+      "line": 39,
+      "text": "return \"\\(position) \\(kind == .income ? \"income\" : \"payment\")\""
+    }
+  ],
+  "sourceHashesMatch": true,
+  "macUnitTestEvidence": {
+    "count": 251,
+    "suites": 18,
+    "passed": true,
+    "log": "/Users/asherbloom/Documents/Codex/TallyReminderCopy-20261009/MacUnitTests.log"
+  },
+  "distributionVersions": {
+    "iOS": {
+      "version": "1.0.4",
+      "build": "25",
+      "strictSignature": true,
+      "productionICloud": true
+    },
+    "Mac": {
+      "version": "1.0.4",
+      "build": "25",
+      "strictSignature": true,
+      "productionICloud": true
+    }
+  },
+  "uploadReceipts": {
+    "iOS": {
+      "version": "1.0.4",
+      "build": "25",
+      "uploadSucceeded": true
+    },
+    "macOS": {
+      "version": "1.0.4",
+      "build": "25",
+      "uploadSucceeded": true
+    }
+  },
+  "issues": [],
+  "testAssessment": "Static copy replacements do not alter scheduling, persistence, or control flow. Existing income/expense distinctions and serialization identifiers remain intact. No copy-mirroring unit tests added."
+}

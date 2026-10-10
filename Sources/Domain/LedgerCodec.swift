@@ -12,7 +12,7 @@ nonisolated enum LedgerError: Error, LocalizedError, Equatable, Sendable {
         case .corruptFile: "This document could not be read. Choose a valid Tally document."
         case .unsupportedVersion: "Update Tally to open this document."
         case .unsupportedCurrency(let code): "The currency \(code) is not supported by this version of Tally."
-        case .tooManyExpenses: "This document has reached its limit of \(LedgerCodec.maximumExpenseCount.formatted()) payments. Create another document to add more."
+        case .tooManyExpenses: "This document has reached its limit of \(LedgerCodec.maximumExpenseCount.formatted()) income and expense items. Create another document to add more."
         case .duplicateExpenseID: "This document contains conflicting data and can’t be opened. Restore a previous version or choose another document."
         case .invalidMerchant: "Enter a name of 1–\(LedgerCodec.maximumMerchantLength) characters."
         case .amountOutOfRange: "An amount in this document is outside the supported range."
@@ -20,7 +20,7 @@ nonisolated enum LedgerError: Error, LocalizedError, Equatable, Sendable {
         case .notesTooLong: "Keep additional text to \(LedgerCodec.maximumNotesLength.formatted()) characters or fewer."
         case .invalidSchedule: "Choose a valid date for this schedule."
         case .invalidCustomRecurrence: "Choose a custom interval between 1 and 999, valid repeat dates, and an end date on or after the start date."
-        case .invalidReminder: "Choose a valid reminder time and a scheduled payment date."
+        case .invalidReminder: "Choose a valid reminder time and a scheduled date."
         }
     }
 }

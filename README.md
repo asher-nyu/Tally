@@ -9,10 +9,10 @@ Tally brings income, expenses, and their timing into one clear view on iPhone, i
 ## Features
 
 - **Monthly and annual views.** Review scheduled income, expenses, and net cash flow for the current period or another month or year.
-- **Flexible schedules.** Organize monthly bills, income every two weeks, annual subscriptions, bonuses, and one-time payments. Custom schedules support repeat intervals, selected weekdays and dates, weekday patterns, and optional end dates.
-- **Fixed and variable amounts.** Keep predictable payments and changing costs together. Totals include fixed amounts, with variable amounts clearly identified and excluded.
-- **Payment reminders.** Choose a reminder time, advance notice, and sound for each income or expense. Ripple is the default. Choose Ripple, Pebble, Glow, Lift, Signal, or None. Selecting a sound plays its preview each time, even when it is already selected; None stops playback and keeps the notification silent.
-- **Provider websites.** Save a website with a payment and open it from the app or its reminder.
+- **Flexible schedules.** Organize monthly bills, income every two weeks, annual subscriptions, bonuses, and one-time income or expenses. Custom schedules support repeat intervals, selected weekdays and dates, weekday patterns, and optional end dates.
+- **Fixed and variable amounts.** Keep fixed and variable income and expenses together. Totals include fixed amounts, with variable amounts clearly identified and excluded.
+- **Income and expense reminders.** Choose a reminder time, advance notice, and sound for each income or expense. Ripple is the default. Choose Ripple, Pebble, Glow, Lift, Signal, or None. Selecting a sound plays its preview each time, even when it is already selected; None stops playback and keeps the notification silent.
+- **Provider websites.** Save a website with income or an expense and open it from the app or its reminder.
 - **Native controls.** Search, filter, and sort your finances with layouts adapted to each device, system light and dark appearance, and accessibility text sizing.
 - **A familiar start.** Open the last used file by default, or choose the file browser in Settings. On Mac, use Tally → Settings or press Command–Comma. On iPhone and iPad, open the … menu from the file browser or an open file. Each device keeps its own launch preference.
 - **Files you control.** Save, rename, move, and recover `.tally` files using native document workflows, with autosave and undo support. On iPhone and iPad, rename or share an open file from the … menu.
